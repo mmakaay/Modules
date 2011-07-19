@@ -1,0 +1,8 @@
+title: Speller Pages
+desc: Spellchecking based on aspell and Speller Pages (http://spellerpages.sourceforge.net)
+version: 1.0.6
+category: posting
+
+hook: lang|
+hook: tpl_editor_buttons|phorum_mod_spellerpages_tpl_editor_buttons
+hook: javascript_register|phorum_mod_spellerpages_javascript_register

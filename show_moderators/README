@@ -1,0 +1,134 @@
+Module  : Show Moderators
+Version : 1.0.1
+Author  : Maurice Makaay
+
+This module requires Phorum 5.2 or later.
+
+This module makes it possible to show the moderators for a forum on
+the index, list and/or read pages. You can choose whether to include
+administrators in the list of moderators or not.
+
+Note: This module can make use of the Phorum caching system to cache
+the gathered moderator information. If you do, then beware that changes
+involving moderators only become visible after the cache expires and
+refreshes. For quick updates, you would need to flush the cache from
+the admin interface.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "show_moderators" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Show Moderators";
+
+- Go to the module's settings page and edit the module
+  configuration to your likings.
+
+
+Customization:
+--------------
+
+* By CSS styling the automatically displayed lists:
+
+  The default module templates provide some CSS classes to work with.
+  You can apply a style to the <span>'s class "mod_show_moderators_index"
+  for styling the moderator lists on the index page. You can style the
+  <div>'s class "mod_show_moderators_footer" for styling the moderator
+  list that is shown in the page footer for the read and list pages.
+  Here are some examples of what you could add to the site's CSS code:
+
+  /* use a small font for the list */
+  #phorum span.mod_show_moderators_index {
+      font-size: 10px;
+  }
+
+  /* remove border and background color and move the list to the right */
+  #phorum div.mod_show_moderators_footer {
+      border: none;
+      background-color: transparent;
+      text-align: right;
+  }
+
+  Note: the #phorum reference in the code is needed for working correctly
+  with the "emerald" template. If you have a different site template, then
+  this CSS code might have to be something else for you.
+
+
+* By creating your own templates for automatic diplaying:
+
+  This module makes use of module templates. These are used for rendering
+  the moderator lists for the automatic displaying features. You can enable
+  automatic displaying from the module's settings screen.
+
+  If you have automatic displaying enabled for the index page, then the
+  template "mods/show_moderators/templates/templatename/index.tpl" will be
+  used for formatting the moderator list for each displayed forum.
+  For automatic displaying of the moderators on the list and read pages,
+  the template "mods/show_moderators/templates/templatename/footer.tpl" will
+  be used.
+
+  If you want to modify these templates to make them work better for your
+  site's template, then do not edit the template files that were in the
+  module distribution. Instead, copy the full directory
+
+     "mods/show_moderators/templates/emerald"
+
+  to
+
+     "mods/show_moderators/templates/yourtemplatename"
+
+  (asuming that your site's template is stored as "templates/yourtemplatename").
+  After doing so, you can edit the files in the new directory. Phorum will
+  automatically recognize that you have created a specific template set to
+  use for your site's active template.
+
+
+* By adding template code to your site's template:
+
+  If you disable automatic displaying of the moderator lists, you can
+  manually add code to your site's template to make them show up.
+
+  * index (index_new.tpl / index_classic.tpl):
+
+    For the index page, the moderator info is added to the {FORUMS} list.
+    Inside the {LOOP FORUMS} loop, you will have access to the template
+    variables {FORUMS->MODERATORS} and {FORUMS->MODERATOR_COUNT}. You can
+    loop over the {FORUMS->MODERATORS} array to display all moderators.
+    Inside such loop, you have access to {FORUM->MODERATORS->PROFILE}
+    (URL to the moderator's profile page) and {FORUM->MODERATORS->DISPLAY_NAME}
+    (the moderator's name). Used in some very basic code:
+
+    {LOOP FORUMS}
+      This forum has {FORUMS->MODERATOR_COUNT} moderator(s).
+      ..
+      {LOOP FORUMS->MODERATORS}
+        <a href="{FORUMS->MODERATORS->PROFILE">
+          {FORUMS->MODERATORS->DISPLAY_NAME}
+        </a>
+      {/LOOP FORUMS->MODERATORS}
+      ..
+    {/LOOP FORUMS}
+
+  * list (list.tpl / list_threads.tpl) and read (read.tpl / read_threads.tpl)
+
+    For the list and read pages, the moderator info is put in the variables
+    {MODERATORS} and {MODERATOR_COUNT}. The data in these variables is
+    the same as the data that can be found in the index page variables.
+    Used in some basic code for the list and read pages:
+
+    This forum has {MODERATOR_COUNT} moderator(s).
+    ..
+    {LOOP MODERATORS}
+      <a href="{MODERATORS->PROFILE">
+        {MODERATORS->DISPLAY_NAME}
+      </a>
+    {/LOOP MODERATORS}
+
+

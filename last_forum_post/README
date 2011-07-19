@@ -1,0 +1,68 @@
+Module  : Last Forum Post
+Version : 1.1.1
+Author  : Maurice Makaay
+Patches : James Revillini
+
+This module keeps track of the last post that has been done in each forum
+(similar to the last post functionality that is already available for
+each thread).
+
+The name of the last author and message subject will be made available
+through the template variables for the forums on the index page. These
+can be shown on the forum index page by modifying the template. See the
+installation instructions below for more info.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "last_forum_post" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Last Forum Post".
+
+- Go to the settings page for the module and click "Rebuild last post info
+  for all forums". After installing, the last post info will only become
+  available for each forum after a new message has been posted in the forum.
+  So you won't see the info appear immediately. By using this rebuild page,
+  you can manually bring your forums up to speed.
+
+- Edit the index*.tpl templates to include the recent author info.
+  The available template variables inside the {LOOP FORUMS} are:
+
+    {FORUMS->last_post}       The date and time of the last post.
+                              (this one is available without this module too)
+
+    {FORUMS->last_subject}    The subject of the last post.
+
+    {FORUMS->URL->MESSAGE}    The URL that points directly to the last post.
+
+    {FORUMS->last_author}     The name of the author of the last post.
+
+    {FORUMS->URL->PROFILE}    The URL that point to the last author's profile.
+
+
+  Here's a suggestion for modifying the templates (index*.tpl).
+  The "{FORUMS->last_post}" is already available in the template,
+  so it's easiest to search for "last_post" in your template and
+  go from there:
+
+   {FORUMS->last_post}
+   {IF FORUMS->last_subject}
+     <br/>
+     <a href="{FORUMS->URL->MESSAGE}">{FORUMS->last_subject}</a>
+     <br/>
+     {LANG->by}
+     {IF FORUMS->URL->PROFILE}<a href="{FORUMS->URL->PROFILE}">{/IF}
+       {FORUMS->last_author}
+     {IF FORUMS->URL->PROFILE}</a>{/IF}
+   {/IF}
+
+  The {IF FORUMS->last_subject} construction is used to prevent PHP from
+  throwing errors when no last post info is available for a forum yet.
+

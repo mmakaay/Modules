@@ -1,0 +1,45 @@
+Module  : Meta Description
+Version : 1.1.3
+Author  : Maurice Makaay
+
+This module will set the {DESCRIPTION} template variable to an appropriate
+value for using it in a meta description HTML tag. The 5.2 code +
+standard emerald template already do set a meta description header
+in the header.tpl, but this module allows for somewhat more fine grained
+control over the amount of data that is put in the meta description tag.
+
+By default, the text from the "Phorum Description" setting (admin interface,
+"General Settings") will be used. Except on the list and read pages.
+
+On the list page (the thread overview), the description for the forum
+will be used as the meta description. The description can be changed by
+editing the description for the forum (from the forum's settings in the
+admin interface).
+
+On the message read page, an excerpt from the thread-starting message
+will be used as the meta description. How much of the message is used
+in the excerpt can be configured from the settings for this module.
+
+Note:
+Make sure that you do not have a meta description tag configured in the
+"Phorum Head Tags" option in the admin interface. If you do so, your
+page will end up with two meta tags, which might confuse search engines.
+
+Thanks to Brian Moon for inspiring me for writing this module by
+publishing his template hack.
+(see http://www.phorum.org/phorum5/read.php?21,50517,page=1)
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "meta_description" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Meta Description".
+
+- Change the settings for the module to your likings.

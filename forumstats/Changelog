@@ -1,0 +1,29 @@
+Changelog:
+----------
+
+2008-01-03 v0.9.4 - Maurice Makaay
+    - added Dutch translation
+    - renamed the title of the mod to match the module directory
+    - include the defaults.php file from the settings.php as well, so the
+      default settings are represented in there at first access
+    - Added Turkish translation. Thanks scabboy!
+
+2008-01-02 v0.9.3
+    - added number_format-function for the numbers
+    - some cleaning in template and language file
+
+2008-01-02 v0.9.2
+    - added French translation from Mickael
+    - added German translation
+
+2008-01-02 v0.9.1
+    - taking the active-field into account too, so that the user
+      has to be active to be shown.
+      (thx for the pointer Maurice)
+
+2008-01-02 v0.9.0
+
+    - Ported the module to Phorum-5.2
+      Added templates and language file
+    - Added option for retrieving the most recent user
+

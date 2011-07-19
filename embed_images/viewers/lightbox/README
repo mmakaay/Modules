@@ -1,0 +1,32 @@
+Upgrading lightbox:
+-------------------
+
+Upgrading the lightbox code is pretty simple:
+
+- Download lightbox from http://www.huddletogether.com/projects/lightbox2/
+- Unpack the downloaded zip file.
+- Move the unpacked files to the code subdirectory.
+
+The resulting code subdirectory should now look like:
+
+code/
+    css/
+        lightbox.css
+    images/
+        blank.gif
+        closelabel.gif
+        close.gif
+        image-1.jpg
+        loading.gif
+        nextlabel.gif
+        next.gif
+        prevlabel.gif
+        prev.gif
+        thumb-1.jpg
+    index.html
+    js/
+        effects.js
+        lightbox.js
+        prototype.js
+        scriptaculous.js
+

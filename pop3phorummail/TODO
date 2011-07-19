@@ -1,0 +1,5 @@
+
+
+- Enhance the Phorummail part to import attachments too
+- Check the POP3-Connection in the settings
+- More settings for the pop3-server (secure, port ...)

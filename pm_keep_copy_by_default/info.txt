@@ -1,0 +1,8 @@
+title: PM Keep Copy enabled by default
+desc: This module will enable the "Keep a copy in my sent items" option by default when writing a new private message.
+version: 1.0.1
+author: Maurice Makaay <maurice@phorum.org>
+category: posting
+url: http://www.phorum.org/phorum5/read.php?62,139301
+
+hook: start_output|phorum_mod_pm_keep_copy_by_default

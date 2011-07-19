@@ -1,0 +1,8 @@
+title: POP3 Phorummail
+desc: This module adds a scheduled function to import mails from pop3 accounts into your phorum
+author: Thomas Seifert
+url: http://www.phorum.org/phorum5/read.php?62,133869
+version: 1.1.0
+require_version: 5.2.9b
+
+hook: scheduled|phorum_pop3phorummail_scheduled

@@ -1,0 +1,182 @@
+Changelog:
+----------
+
+2011-04-20 v2.1.1
+
+    - Fixed newflags for the "Updated topics" view (they were never shown).
+      Thanks to phorum.org user "noe" for notifying about the problem.
+
+2011-04-06 v2.1.0
+
+    - Added support for some ajax features. In 5.2, this can be used to do
+      some ajax loading of messages within the recent messages page or
+      within other parts of the Phorum site..
+
+    - In 5.3, the new features will allow for loading recent messages lists
+      from other websites, making it really easy to put a list of recent
+      messages / threads on any website.
+
+    - Switched to using the newflags API for adding newflags to messages.
+
+    - Implemented support for the Phorum 5.3 option to list unread messages.
+      In Phorum 5.2, this option will silently be hidden.
+
+2011-01-17 v2.0.18
+
+    - Improved the support for the Readable Dates module.
+      Thanks to phorum.org user "noe" for pointing out date grouping issues
+      that occurred for messages that were posted after the time limit
+      as configured in the Readable Dates module.
+
+    - Added new German language files by Oliver Riesen.
+
+    - Added a Russian translation by phorum.org user "sailord".
+
+2011-01-13 v2.0.17
+
+    - Made "Group by date" the default for users that enter the recent
+      messages page for the first time.
+
+    - Added support for the User Avatar module, by letting the module
+      setup the template variable {MESSAGES->MOD_USER_AVATAR}, which
+      can be used in the module templates. 
+
+    - Added protection against setting the show_amount to negative values,
+      which would result in database error messages.
+
+2010-04-22 v2.0.16
+
+    - Modified the breadcrumbs path for this module a bit,
+      to make it more clear.
+
+    - Updated the Emerald template to do more of the styling using CSS
+      and added a few minor changes to improve the layout.
+
+    - Implemented a new feature to make it possible to let the
+      "Group by date" feature use readable dates.
+
+2009-07-22 v2.0.15
+
+    - Added Czech translation by Phorum.org user timqui.
+
+    - Added French translation by notre-planete.info.
+
+    - Added German translation files by Oliver Riesen.
+
+    - Added Spanish translation by Phorum.org user Diego.
+
+    - Added a module template that is compatible with Phorum's
+      "classic" template. Thanks to Phorum.org user treble.
+
+2008-11-08 v2.0.14
+
+    - Added support for adding an extra item to the popupmenu of
+      the Jumpmenu module. This feature can be enabled and disabled
+      through the module's settings screen.
+
+2008-02-03 v2.0.13
+
+    - Added support for using the Readable Dates module as the date
+      formatter. A settings screen was added for the module, which can
+      be used to enable or disable the Readable Dates support.
+
+2008-01-25 v2.0.12
+
+    - Fixed a problem where "Group by forum" would only show the forum
+      name that belonged to the very first message in the overview.
+      Thanks to phorum.org user "mshell" for reporting the problem.
+
+    - Fixed a small code typo (with no functional consequences), reported
+      by Steve Healy. This typo could trigger some PHP warnings, depending
+      on the PHP configuration.
+
+    - The HTML title is now set to "Recent Messages" as well when the user
+      is browsing the recent messages. Thanks to Phorum user "hcgtv" for
+      the suggestion.
+
+2008-01-23 v2.0.11
+
+    - Included language strings for "OlderMessages" and "NewerMessages"
+      in the package, because they are no longer available as standard
+      language strings in Phorum 5.2. For forums that use a clean
+      5.2 only language file, this resulted in the "Older messages"
+      and "Newer messages" links being invisible in the interface.
+      Thanks to CBiLL for noticing.
+
+2008-01-08 v2.0.10
+
+    - Some small updates to the emerald module template to make it match
+      the Phorum list page template a bit more (using the same class and
+      heading tag for the subjects, so only new messages will show up in
+      bold).
+
+2008-01-03 v2.0.9
+
+    - The icons in front of the topics are supposed to link to some useful
+      location (like the message, the last message in a thread or to the
+      first new message in a thread). This did not work when grouping
+      messages by their forum or folder. This release fixes this problem.
+      Thanks to Thomas for noticing.
+
+    - Added updated German translation files by Berti.
+
+2008-01-02 v2.0.8
+
+    - A problem sneaked into the pull down menu. If you are using multiple
+      folders, then the pull down menu items might be incorrectly
+      ordered. This release fixes that problem.
+
+    - A standard Phorum function is now used for building the pull down
+      forum menu. If you see empty folders appear in the list, then you
+      will need to upgrade to Phorum 5.2.5 or up. This problem has been
+      fixed in the core code.
+
+2008-01-01 v2.0.7
+
+    - Fixed a compatibility problem in case the Phorum pages are served
+      as content type application/xhtml_xml.
+
+    - For the "Group by date" view in combination with "Updated topics",
+      the grouping headers are now the dates on which the last updates
+      were done for the topic threads instead of the start dates for
+      the topics.
+
+2007-12-31 v2.0.6
+
+    - Set the heading for the addon page to "Recent Messages" and cleared
+      the page description to not show the (v)root's description.
+
+    - Added "Recent Messages" to the breadcrumbs navigation.
+
+    - Fixed a problem with the "Group by folder" view, which did not show
+      full folder paths for the grouping headers, only the top level
+      folder. Thanks to Berti for reporting the problem.
+
+2007-12-17 v2.0.5
+
+    - Fixed an undefined index warning as reported by Steve Healy.
+
+2007-12-12 v2.0.4
+
+    - Omit empty folders from the folder list.
+      Thanks to Steve Healy for the suggestion.
+
+    - Added German language file. Thanks Hiiri!
+
+2007-10-27 v2.0.3
+
+    - Implemented {MESSAGE->URL->LAST_POST} for use in the templates.
+
+2007-10-27 v2.0.2
+
+    - Implemented new "updated threads" option.
+
+2007-10-23 v2.0.1
+
+    - Turkish language file provided by Serdar of paticik.com.
+
+2007-10-23 v2.0.0
+
+    - Initial release.
+
+

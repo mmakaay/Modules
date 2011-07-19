@@ -1,0 +1,44 @@
+Module  : Readable Dates
+Version : 1.1.11
+Author  : Maurice Makaay
+
+Make dates easier to read for humans, by using relative indications like
+"two hours ago", "yesterday, 12:30", "today, 17:52", "two weeks ago",
+"last year", etc. All date indications can be customized through the
+language files.
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "readable_dates" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Readable Dates".
+
+- Go to the settings screen for the module to configure the module
+  (e.g. on what pages to replace the standard dates with readable dates).
+
+
+Integration with other modules:
+-------------------------------
+
+Other modules or scripts that want to make use of the readable date
+formatting, can make use of a special hook call. If currently code like
+this is used for formatting:
+
+  $date = phorum_date($PHORUM["short_date_time"], $time);
+
+then it can be replaced with this:
+
+  if (!empty($PHORUM['hooks']['format_readable_date'])) {
+      $date = phorum_hook('format_readable_date', $time);
+  } else {
+      $date = phorum_date($PHORUM["short_date_time"], $time);
+  }
+
+

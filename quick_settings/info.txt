@@ -1,0 +1,13 @@
+title: Quick settings
+desc:  This module allows changing settings for the active user via URLs, making it possible for the user to quickly change settings without having to go to the control center.
+author: Maurice Makaay <maurice@phorum.org>
+version: 1.0.0
+require_version: 5.2.0
+category: viewlayout
+
+hook:  page_read|phorum_mod_quick_settings_page_read
+hook:  page_list|phorum_mod_quick_settings_page_list
+hook:  common|phorum_mod_quick_settings_common
+
+priority: run module before limit_threaded_views
+

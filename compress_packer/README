@@ -1,0 +1,26 @@
+Module  : Compress Javascript using Packer
+Version : 1.0.0
+Author  : Maurice Makaay
+
+This module compresses the Phorum Javascript code using Dean Edwards'
+JavaScript Packer algorithm. This reduces bandwidth usage and speeds up the
+JavaScript code.
+
+For more information see:
+
+Dean Edwards' website - http://dean.edwards.name/packer/
+PHP implementation - http://dean.edwards.name/packer/
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "compress_packer" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Compress Javascript using Packer".
+

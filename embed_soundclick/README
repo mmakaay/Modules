@@ -1,0 +1,23 @@
+Module  : Embed Soundclick
+Version : 1.0.2
+Author  : Maurice Makaay <maurice@phorum.org>
+
+Soundclick is a web site (http://www.soundclick.com) where musicians can
+post their audio and video files. This module recognizes soundclick URLs
+in messages and replaces them with embedded players, so the files can be
+played directly from the message.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "embed_soundclick" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Embed Soundclick".
+

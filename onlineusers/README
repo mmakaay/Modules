@@ -1,0 +1,37 @@
+Module  : Online Users
+Version : 2.5.2
+Authors : Chris Eaton <tridus@hiredgoons.ca> (original 5.1 module)
+          Phorum user Sunbringer (initial 5.1 to 5.2 port)
+          Maurice Makaay <maurice@phorum.org> (5.2 rewrite)
+          Thomas Seifert <thomas@phorum.org> (database support)
+
+This module shows which users have been seen online recently.
+Additionally, it can keep track of the number of guests, visitor
+records and the number of active readers for each forum.
+
+
+Original lincense by Chris:
+---------------------------
+
+You are free to use, modify, or redistribute this code as long as I (Chris
+Eaton) am given credit for the original development somewhere. This code
+comes with absolutly no warranty. It would be nice (but not required) of
+you to email me if you find this module useful. :-)
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "onlineusers" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Online Users";
+
+- After this, go to the module's settings screen to configure
+  the options for this module.
+

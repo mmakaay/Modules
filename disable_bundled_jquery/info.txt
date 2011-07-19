@@ -1,0 +1,16 @@
+title: Disable Bundled jQuery
+desc: This mod suppresses the loading of the bundled jQuery library, which can be useful in case a jQuery library is already loaded in another way for your site.
+version: 1.0.0
+author: Maurice Makaay
+category: admin
+
+# Version 5.2.16 introduced jQuery in Phorum.
+require_version: 5.2.16
+
+hook:  javascript_register|phorum_mod_disable_bundled_jquery_register
+hook:  javascript_filter|phorum_mod_disable_bundled_jquery_filter
+
+# Run this hook before other hooks, because we need access to the
+# clean code. Other filters might compress the data, which would make
+# it useless for our filter.
+priority: run hook javascript_filter before *

@@ -1,0 +1,22 @@
+Changelog:
+----------
+
+2011-01-13 v1.0.2
+
+   - Switched to using jQuery code in the javascript for this module.
+
+   - The editor textarea is now automatically focussed when the editor is
+     shown.
+
+2009-10-27 v1.0.1
+
+   - Also make the hide reply editor functionality available when the
+     forum is in threaded mode. Initially, this was explicitly not
+     implemented, because the module's main target was to improve
+     threading structure for flat view and hybrid view. Based on
+     demand, the functionality was extended to threaded mode as well.
+
+2009-07-17 v1.0.0
+
+   - Initial release
+

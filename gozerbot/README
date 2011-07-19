@@ -1,0 +1,96 @@
+Module  : Gozerbot
+Version : 1.0.1
+Author  : Maurice Makaay
+
+"Gozerbot" (http://www.gozerbot.org) is an IRC bot, written in python.
+This module makes it possible to use Gozerbot for doing various
+notifications to a #channel or nickname on IRC.
+
+Implemented notifications are:
+
+* new threads that are posted
+* new reply messages that are posted
+
+Here's a very cool ASCII art of the route that a notifcation message takes:
+
++--------+          +----------+         +----------------------+
+| Phorum |---UDP--->| Gozerbot |---IRC-->| #channel or nickname |
++--------+          +----------+         | on the IRC server    |
+                                         +----------------------+
+
+Phorum and Gozerbot do not have to run on the same system to make this
+setup work. You can use a gozerbot running on any system, as long as
+you configure the Gozerbot to accept UDP traffic from the host that
+is running Phorum.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "gozerbot" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Gozerbot";
+
+- Edit the settings for the module to setup the connection to the
+  Gozerbot UDP server.
+
+- The notifications are sent to the Gozerbot UDP server. This UDP server
+  is not enabled by default. If you are running Gozerbot without UDP support,
+  then edit the udp* config parameters to enable UDP and reboot Gozerbot.
+  Below, you see the part of the configuration that applies to the UDP
+  support. For details on setting up Gozerbot and these configuration
+  parameters, please refer to the Gozerbot documentation.
+
+    udp = 1
+    partyudp = 0
+    udpipv6 = 0
+    udphost = 'localhost'
+    udpport = 5500
+    udpmasks = ['192.168*', ]   # access from a masked range of IP addresses
+    udpallow = ['127.0.0.1', ]  # access from a specific IP address
+    udpallowednicks = ['#channel', '#otherchannel', 'nickname']
+    udppassword = 'mypass'
+    udpseed = "supersecretkey!!"
+    udpstrip = 1
+
+
+Troubleshooting:
+----------------
+
+I you cannot get messages to transmit to a remotely hosted Gozerbot,
+then check the following issues:
+
+- whether the Gozerbot port is not being blocked by a firewall
+  (check both the outgoing firewall on the host that is running Phorum and
+  the incoming firewall on the host that is running Gozerbot);
+
+- whether Gozerbot uses udpmasks/udpallow to grant access to the
+  IP address of the host on which Phorum is hosted;
+
+- whether Gozerbot listens on the public interface IP address
+  and not on localhost (udphost = 'localhost' is wrong here, try
+  replacing it with udphost = '0.0.0.0' to make Gozerbot listen
+  on all network interfaces);
+
+- whether the configured password and crypt key match exactly with
+  respectively the udppassword and udpseed options from the Gozerbot
+  config file.
+
+
+Customization:
+--------------
+
+You can translate the notification messages that this module
+sends to Gozerbot by creating a language file in
+"mods/gozerbot/lang/<yourlang>.php". In this filename <yourlang> has to
+be the same name as the main language file that you use
+(i.e. "include/lang/<yourlang>.php"). If you write a translation for this
+module, then please post it in the module's thread at phorum.org, so I
+can include it in the distribution.
+

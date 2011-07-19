@@ -1,0 +1,90 @@
+Changelog:
+----------
+
+2011-01-14 v1.2.0
+
+    - Updated the module to make use of jQuery for the javascript code.
+
+    - Fixed various issues that could cause incorrect placement of the
+		  jumpmenu menus.
+
+    - Added new German language files by Oliver Riesen.
+
+2009-05-24 v1.1.9
+
+    - Added compatibility for using the jumpmenu within a vroot.
+
+    - Added a German translation by Oliver Riesen and a French
+      translation by Manu. Thanks guys!
+
+    - Replaced the CSS :hover classes with scripted highlighting
+      code. As a result, we were able to visualize the path that the user
+      followed in the jumpmenu, by keeping selected entries in higher
+      menu levels active. This behavior matches the behavior that one
+      can observe by default in OS menus.
+
+2008-11-08 v1.1.8
+
+    - Fixed the rendering of the popup menu with extra options for
+      MSIE. In MSIE, the separator was pushing the menu to full screen
+      width, which is not too practical for a menu.
+
+    - Fixed bug: when hovering over the separator, the menu code did
+      not detect that the pointer was still on the menu and closed the
+      popup menu after a little while.
+
+2008-11-08 v1.1.7
+
+    - Added a hook "jumpmenu_add" to the module, which can be used by
+      other modules to add extra items to the root level popup of
+      the jump menu. The first implementation of an extra menu item
+      has been added to the Recent Messages module.
+
+2008-04-15 v1.1.6
+
+    - Added a module template for the "classic" Phorum template.
+
+2007-12-14 v1.1.5
+
+    - Fixed a problem with the jumpmenu for cases where no forums are
+      visible at all for the visitor (for example in case all forums are
+      restricted for reading by their permissions).
+      Thanks to Steve Healy for reporting the problem.
+
+2007-11-26 v1.1.4
+
+    - Some improvements in the javascript library for positioning the
+      menus in case the root node is inside an "absolute" or "relative"
+      positioned element (thanks to Matthias for having a site design
+      that broke my code and for taking the time to test out a *lot*
+      of new test versions to fix that ;-).
+
+2007-11-22 v1.1.3
+
+    - Empty folders are no longer shown in the menu.
+
+    - If hovering over a forum menu item, the submenus below the
+      folder in which the forum menu item resides will be collapsed.
+
+    - Fixed some JavaScript errors that occurred when hovering over the
+      menu during page unloading.
+
+    - Implemented an <iframe> (yech!) based work around for letting the
+      menus cover windowed elements in MSIE (like <select> lists, which
+      would otherwise always be on top of the menus).
+
+2007-11-02 v1.1.2
+
+    - Implemented the new css_register and javascript_register hooks
+      This requires for Phorum 5.2.2 or newer.
+
+2007-10-23 v1.1.1
+
+    - Added Turkish language file.
+      Thanks to Serdar of paticik.com.
+
+2007-10-08 v1.1.0
+
+    - Full rewrite of the old jumpmenu. The jumpmenu now makes use of
+      javascript driven menus with submenu's to display folders.
+

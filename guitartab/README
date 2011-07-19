@@ -1,0 +1,35 @@
+Module  : Guitar TAB
+Version : 1.0.1
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module will try to autodetect ASCII art based guitar TABs in forum
+messages and automatically applies the bbcode tag [code] to them (unless
+they are already within a [code] block).
+
+Here's an example ASCII guitar TAB:
+
+|---------0-----------0-----------------|
+|-------0---0-3s5-(5)---3p0-------------|
+|---2b4---------------------2b3r(2)p0---|
+|-------------------------------------2-|
+|---------------------------------------|
+|---------------------------------------|
+
+The module will detect TABs that are constructed out of
+4 (bass), 5 (5-string bass), 6 (guitar) and 7 (7-string guitar)
+TAB lines.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "guitartab" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Guitar TAB".
+

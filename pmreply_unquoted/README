@@ -1,0 +1,21 @@
+Module  : PM Reply Unquoted
+Version : 1.0.0
+Author  : Maurice Makaay
+
+This module changes the PM message reply link into a standard PM link,
+so the forum message will not be quoted.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "pmreply_unquoted" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "PM Reply Unquoted".
+

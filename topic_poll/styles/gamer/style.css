@@ -1,0 +1,60 @@
+#topic_poll {
+    width: 275px;
+    border: 3px solid #422;
+    background: black url(background.jpg) right repeat-y;
+}
+
+#topic_poll #topic_poll_header {
+    background: black url(title.jpg) 0px -1px repeat-x;
+    height: 37px;
+    padding-top: 2px;
+    margin: 0px;
+    color: #dda;
+}
+
+#topic_poll #topic_poll_header #topic_poll_details {
+    display: none;
+}
+
+#topic_poll #topic_poll_question {
+    background: black url(background_cream.jpg);
+    margin: 5px;
+    border: 1px solid white;
+    color: black;
+    font-weight: bold;
+}
+
+#topic_poll #topic_poll_answers,
+#topic_poll #topic_poll_answers table td {
+    color: white;
+}
+
+#topic_poll #topic_poll_answers table {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#topic_poll_votes_column {
+    display: none;
+}
+
+#topic_poll_bar_column {
+    width: 20%;
+}
+
+.topic_poll_button {
+    color: #dda;
+    background-color: black;
+    border: 1px solid #dda;
+}
+
+#topic_poll #topic_poll_answers .topic_poll_percentage_bar {
+    font-size: 8px;
+    height: 14px;
+    background: black url(bar.jpg) 0px -8px;
+    border: none;
+    border-right: 1px solid #666;
+    border-left: 1px solid #666;
+}
+

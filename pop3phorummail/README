@@ -1,0 +1,40 @@
+Module  : POP3 Phorummail
+Version : 1.0.0
+Author  : Thomas Seifert <thomas@phorum.org>
+
+This module implements a mailimport from pop3 mailaccounts into phorum.
+
+This script is derived from 
+1) http://www.phorum.org/phorum5/read.php?16,121015
+   pop3-collector from woleium
+
+2) http://www.phorum.org/phorum5/read.php?16,14081
+   Phorummail by Brian Moon
+
+Updated, reworked and turned into a module for current 5.2 (tested with 5.2.9) 
+by Thomas Seifert ( thomas@phorum.org ).
+
+
+Installation instructions:
+--------------------------
+
+- check that the Mail_mimeDecode package from PEAR has been installed or install
+  it ( http://pear.php.net/package/Mail_mimeDecode ), its required for the import
+
+- Unpack the archive;
+
+- Move the directory "pop3phorummail" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Configure the module through the module's settings page.
+
+- Enable the module "POP3 Phorummail".
+
+- Setup a cronjob to run scheduled tasks
+  for example like this (would run the tasks every 5 minutes):
+  */5 * * * * cd /home/your/phorum/directory && /usr/bin/php ./script.php --scheduled > /dev/null
+
+  I recommend to run the script by hand until everything is working correctly.

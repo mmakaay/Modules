@@ -1,0 +1,93 @@
+Module  : New Count
+Version : 1.13
+Author  : Panu Artimo
+Patches : Brian Moon (version 1.8)
+          Oliver Riesen (versions 1.9.1 and 1.9.2)
+          Maurice Makaay (versions 1.9 - 1.13)
+
+Shows the number of new messages in threads instead of just indicating
+that there are new messages. It also computes totals for all new messages
+and treads in the forum index and message lists.
+
+Note from the original author (Panu):
+You can do whatever you want with this code, as long as I am given some
+credit somewhere in your code.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "new_count" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "New posts in thread".
+
+
+Template customization:
+-----------------------
+
+* New thread and message stats:
+
+  By default, this module will show a total count for new threads and
+  messages after the page header. If you do not want the totals to appear
+  there, go to the settings screen for this module and disable automatic
+  displaying of the totals.
+
+  After this, you can put the totals at appropriate places in your
+  templates. These would typically go into header.tpl, list.tpl and/or
+  index.tpl. You can use the following template variables:
+
+    {MOD_NEW_COUNT}       The fully formatted new count totals HTML code.
+    {NEW_MESSAGES}        The total number of new messages.
+    {NEW_THREADS}         The total number of new threads.
+
+
+* Showing the number of new messages for threads on the list page:
+
+  The default Phorum 5.1 template will already show the amount of new
+  messages for threads on the list page if you have this module enabled.
+  The default Phorum 5.2 template ("emerald") however, will not do so.
+  In that template, the new message information {MESSAGES->new} is just
+  used to change the icon in front of threads that contain new messages.
+  To display the number of new messages for threads in that template,
+  you will have to edit the list.tpl template.
+
+  You can use these template variables inside the {LOOP MESSAGES} loop:
+
+    {MESSAGES->new}       A formatted string "[X] new" that is set if there
+                          are new messages for the thread.
+    {MESSAGES->new_count} The number of new messages for the thread.
+
+  You can for example use the following code somewhere after the
+  {MESSAGES->subject} in list.tpl to match the old 5.1 behavior:
+
+    {IF MESSAGES->new}
+      <a href="{MESSAGES->URL->NEWPOST}">
+        <span class="new-indicator">{MESSAGES->new}</span>
+      </a>
+    {/IF}
+
+
+Localization:
+-------------
+
+This module supports localization through the language files in the
+lang directory. If your language is not supported by the module, copy
+english.php to <yourlanguage>.php and update the language strings in it.
+
+If you create a new language file, please post it to the Phorum forums,
+so it can be added to this distribution.
+
+
+Dedicated:
+----------
+
+To my (Panu) 2 sons who wanted to be born 2 months beforehand and I
+couldn't sleep... And I'm 2000 km away. They are now 8 months old,
+time goes so fast...
+

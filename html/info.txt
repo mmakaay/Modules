@@ -1,0 +1,21 @@
+title: HTML in Messages
+desc:  This module allow HTML to be used in forum messages. This includes allowing special characters that are HTML encoded.
+author: Phorum Dev Team
+version: 2.0.0
+url: http://www.phorum.org/phorum5/read.php?62,140066
+category: posting
+
+hook: format|phorum_mod_html_format
+
+# We want the format hook to run as the first one in the chain, so
+# other hooks that work on HTML tags can be sure that replacements like
+# "&gt;" to ">" are done.
+#
+# Additionally, we do not want output from modules that implement BBcode
+# tags to be checked and stripped by this module, because there are some
+# BBcode tags for which the output includes javascript code that we
+# defenitely want to run. So for these, it is the task of the BBcode
+# tag implementing module to make sure that the produced code is XSS safe.
+
+priority: run hook format before *
+

@@ -1,0 +1,53 @@
+Module  : Banner Manager
+Version : 1.0.4
+Author  : Maurice Makaay <maurice@gitaar.net>
+
+This module makes it possible to display arbitrary blocks of HTML/PHP code
+in Phorum pages. Multiple blocks can be defined and you can configure what
+block to show on what page. The system was designed for adding banners to
+Phorum, but with some fantasy other things are possible too (e.g. adding
+a customized page header per forum).
+
+From version 1.0.3 on, date range support has been added, allowing
+possibilities such as:
+
+- commemorating public holidays with new banners, like Google does;
+- setting up an "Advent Calendar" of 24 banners to be shown
+  sequentially in the run up to Christmas;
+- advertising upcoming events and automatically cancelling the
+  banner after a cut off date.
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "banner_manager" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Banner Manager";
+
+- After this, go to the module's settings screen to configure
+  banner blocks to display and on what pages to display them.
+
+
+Placement of the banner code:
+-----------------------------
+
+By default, the module will print the banner centered on the screen,
+on top of the page (right after displaying the header). In case this
+is not the location where you want the banner to appear, you can change
+the positioning options in the module settings. If the options
+"Banner position" and "Banner alignment" are not sufficient for
+placing the banner, you can also fully customize where you want the
+banner blocks to appear. These are the steps to take:
+
+- Activate the option "Do not display the banner automatically";
+
+- Place the special template variable {MOD_BANNER_MANAGER} in the template(s)
+  at the position where you want the banner to appear. This variable
+  will be replaced by the code from the banner block.
+

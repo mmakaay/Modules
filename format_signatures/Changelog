@@ -1,0 +1,12 @@
+Changelog:
+----------
+
+2011-01-05 1.0.1
+
+    - Do not prepare the signature formatting when on the control center
+      page, so we won't break the signature editor there.
+
+2008-01-29 1.0.0
+
+    - Initial release
+

@@ -1,0 +1,9 @@
+title: PM Reply Unquoted
+desc: This module changes the PM message reply link into a standard PM link, so the forum message will not be quoted.
+author: Maurice Makaay
+version: 1.0.0
+url: http://www.phorum.org/
+category: posting
+
+hook: read|phorum_mod_pmreply_unquoted_read
+

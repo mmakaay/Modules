@@ -1,0 +1,40 @@
+#topic_poll {
+    border: 1px solid black;
+}
+
+#topic_poll #topic_poll_header {
+    background-color: black;
+}
+
+#topic_poll #topic_poll_title {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#topic_poll #topic_poll_header #topic_poll_details {
+    color: white;
+}
+
+#topic_poll #topic_poll_question {
+    background-color: black;
+    font-weight: bold;
+    color: #fd2;
+    border-bottom: 1px solid black;
+}
+
+#topic_poll #topic_poll_answers {
+    color: black;
+    padding: 10px;
+    background-color: white;
+}
+
+.topic_poll_button {
+    border: 1px solid black;
+}
+
+#topic_poll #topic_poll_answers .topic_poll_percentage_bar {
+    border: 1px solid black; 
+    background-color: #fd2;
+}
+

@@ -1,0 +1,12 @@
+title: Attachment Uploader
+desc: This module improves the attachment uploading process. It implements attaching and detaching files for a message, without having to refresh the page. For buzzword compliancy, you could think of it as an "Ajax Uploader", although Ajax technology cannot be used for uploading files.
+version: 1.0.2
+url: http://www.phorum-support.de/
+author: Maurice Makaay
+require_version: 5.2.16
+category: posting
+
+hook: lang|
+hook: tpl_editor_before_textarea|phorum_mod_attachment_uploader_before_textarea
+hook: start_output|phorum_mod_attachment_uploader_start_output
+

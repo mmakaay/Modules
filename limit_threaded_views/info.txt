@@ -1,0 +1,14 @@
+title: Limit threaded views
+desc: This module allows admins to setup limits for threaded list and read views. If a limit is reached, then the module will switch the view mode back to flat view. This can be useful in case there are threads in a forum that are too large for the system to process quickly.
+author: Maurice Makaay <maurice@phorum.org>
+url: http://www.phorum-support.de/
+require_version: 5.2.0
+version: 1.0.1
+category: viewlayout
+
+hook: common|phorum_mod_limit_threaded_views_common
+hook: page_read|phorum_mod_limit_threaded_views_page_read
+hook: page_list|phorum_mod_limit_threaded_views_page_list
+hook: after_header|phorum_mod_limit_threaded_views_after_header
+hook: lang|
+

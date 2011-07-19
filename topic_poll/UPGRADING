@@ -1,0 +1,30 @@
+Upgrading to v1.0.13
+
+When you have your own modified template for this module, then copy
+body_and_poll_separator.tpl from templates/emerald
+to templates/<yourtemplate>.
+
+Also, visit the admin interface (admin.php) to let the module reload
+its updated hook descriptions (no need to click "Save" on the Modules
+page or anything; visiting the admin index page ought to be enough).
+If these hook descriptions are not yet updated, you will see codes like
+
+  [mod_topic_poll ......]
+
+in your messages.
+
+----------------------------------------------------------------------
+
+Upgrading to v1.0.12
+
+When you have created a custom template for this module, then
+you will have to update two template files:
+
+ - templates/<yourtemplate>/editor.tpl
+ - templates/<yourtemplate>/voting_form.tpl
+
+In each of these, you will find a <form ....> tag. Right after this
+opening tag for the form, add the template variable {POST_VARS}.
+You can take a look at the included template in templates/emerald
+to see what the files should look like.
+

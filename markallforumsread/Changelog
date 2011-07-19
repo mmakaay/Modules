@@ -1,0 +1,61 @@
+Changelog:
+----------
+
+2009-07-22 v1.0.9
+
+    - Added French language file. 
+      Thanks to Phorum.org user manuvb (Manu).
+
+    - Added Czech language file. 
+      Thanks to Phorum.org user timqui.
+
+2008-04-21 v1.0.8
+
+   - Instead of only marking the forums read that are visible on the
+     index page, the "mark all forums read" link now marks all forums
+     that are in the current vroot as read (which does cover the
+     definition of "all forums" a lot better). Thanks to Phorum user
+     "Lammi41" for noticing the deficiency.
+
+2007-10-23 v1.0.7
+
+    - Added Turkish language file. 
+      Thanks to Serdar of paticik.com.
+
+2007-07-07 v1.0.6
+
+    - Fixed a small logic fix, which caused automatic displaying of
+      the "Mark all forums read" link to fail.
+
+2007-07-07 v1.0.5
+
+    - Just a small change to add the 5.2 style URL format
+      {URL->MARKALLFORUMSREAD}. The old URL template var is still
+      available as well.
+
+2007-01-03 v1.0.4
+
+    - Adjusted cleaning up the newflags cache to work with the cache_version
+      forum field too (only for 5.2 development version, not for 5.1.x).
+
+2006-10-03 v1.0.3
+
+    - Fixed an undefined index warning in case there are no forums
+      displayed on the index page.
+
+2006-08-24 v1.0.2
+
+    - Added a redirect back to the plain index URL, to prevent people from
+      bookmarking the URL with the mark all read argument in it.
+
+2006-08-23 v1.0.1
+
+    - Found out what was causing announcements not to be marked read when
+      marking a forum read. This turned out to be a core problem. This has
+      been fixed in Phorum 5.1.16. I removed the experimental code for marking
+      announcements read from this mod.
+
+2006-08-23 v1.0.0
+
+    - Initial revision
+

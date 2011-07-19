@@ -1,0 +1,69 @@
+Changelog:
+----------
+
+2008-06-24 v1.0.9
+
+    - Fixed a missing unescaped backslash in javascript code.
+      Thanks to Oliver Riesen for the notice.
+
+    - Added new German language files. Thanks to Oliver Riesen!
+
+2008-05-02 v1.0.8
+
+    - Fixed a character encoding problem which occurred when using
+      special characters in a spoiler for non-UTF8 Phorum installs.
+
+2007-11-23 v1.0.7
+
+    - Created a work around for a missing URL building call in
+      Phorum 5.2.2-beta, causing the images to not appear in some cases.
+
+2007-11-02 v1.0.6
+
+    - Make use of the new css_register and javascript_register hooks.
+      This requires Phorum 5.2.2 or newer.
+
+    - Added a German language file.
+      Thanks to phorum.org user "sunbringer"!
+
+    - Fixed a problem with the preview mod when editing a message, in
+      case the edit action was used to add a spoiler block.
+
+2007-11-01 v1.0.5
+
+    - Honor the "disable bbcode for this post" flag (a feature of the
+      BBcode module).
+
+    - Added #phorum identifier to the CSS code and improved the CSS code
+      a bit to make formatting of spoilers inside quotes look good.
+
+    - Made spoilers inside private messages work.
+
+2007-10-23 v1.0.4
+
+    - Added Turkish language file.
+      Thanks to Serdar of paticik.com.
+
+    - Improved interoperability with the In-body Attachments module
+      (requires In-body Attachments module version 1.5.3).
+
+2007-10-09 v1.0.3
+
+    - Fixed bug: the preview of a spoiler in a user signature did not work
+      in the user control center's "View my Profile" section.
+
+2007-10-07 v1.0.2
+
+    - Made it possible to use spoilers in the signature.
+
+    - Added an option to the module settings, which can be used to allow
+      the use of spoilers in the signature. This feature is off by default.
+
+2007-10-04 v1.0.1
+
+    - Fixed bug: the default spoiler description did not work.
+
+2007-10-03 v1.0.0
+
+    - Initial release
+

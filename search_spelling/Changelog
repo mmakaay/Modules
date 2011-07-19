@@ -1,0 +1,24 @@
+Changelog:
+----------
+
+2011-01-09 v1.0.2
+
+    - Fixed the module to work with the latest Google pages.
+
+    - Switched to using the HTTP GET Phorum API code for better compatibility.
+
+    - Added new German language files. Thanks to Oliver Riesen!
+
+2007-10-23 v1.0.1
+
+    - Added Turkish language file. 
+      Thanks to Serdar of paticik.com.
+
+    - Fixed a small bug which sneaked into the v1.0.0 code right before
+      releasing it. This bug killed the search arguments in the
+      search_action hook, causing the regular search to fail.
+
+2007-10-22 v1.0.0
+
+    - Initial release
+

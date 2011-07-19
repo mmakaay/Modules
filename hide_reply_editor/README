@@ -1,0 +1,34 @@
+Module  : Hide Reply Editor
+Version : 1.0.2
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module will hide the reply editor on the read page. The editor is only
+shown after a user actively clicks the Reply or Quote button.
+
+This will improve the threaded structure of a discussion, because it prevents
+the user from simply scrolling down and starting to type, in which case the
+reply would always be a reply to the last message. For users that use flat
+mode reading, this is no problem, but threaded (or hybrid, which is a form
+of threading too) readers would have a hard time following the conversation.
+Also, this makes moderation somewhat easier, because "Delete + Replies"
+becomes more reliable.
+
+The same effect could be accomplished by setting "Reply form appears: on a
+separate page" in the General Settings, since this forces the user to always
+click Reply or Quote as well, but then the user is unable to see the rest of
+the discussion while typing the new message.
+
+
+Installation instructions:
+--------------------------
+
+- Unpack the archive;
+
+- Move the directory "hide_reply_editor" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Hide Reply Editor".
+

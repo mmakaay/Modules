@@ -1,0 +1,14 @@
+Changelog:
+----------
+
+2011-03-28 v1.0.1
+
+    - Removed the "lang" statement from the info.txt. This module does not
+      have language strings to translate. In 5.3, stating that a translation
+      is available, without having any language file in the module dir at
+      all, is treated as an error case.
+
+2007-01-21 v1.0.0
+
+    - Initial release
+

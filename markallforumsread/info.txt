@@ -1,0 +1,10 @@
+title: Mark All Forums Read
+desc:  Displays a link to mark all forums read on the index page.
+version: 1.0.9
+author: Maurice Makaay
+category: user_features
+
+hook:  lang|
+hook:  index|phorum_mod_markallforumsread_index
+hook:  after_header|phorum_mod_markallforumsread_after_header
+hook:  before_footer|phorum_mod_markallforumsread_before_footer

@@ -1,0 +1,39 @@
+Changelog:
+----------
+
+2007-07-08 v1.2.0
+
+    - Incorporated functionality as proposed by James Revillini for also
+      keeping track of the most recently posted subjects (before this change,
+      only the recent authors were tracked). Thanks to James for the primary
+      investigation and implementation.
+
+    - Added standard Phorum formatting to the author and subject, so things
+      like subject smileys work too.
+
+    - Updated the README to let the docs match the new code.
+
+    - Refactored the module to "Last Forum Post" to better represent its
+      new functionality.
+
+    - Added a settings screen for rebuilding the data for all forums.
+
+2007-07-08 v1.1.1
+
+    - Honor (hidden) $PHORUM["custom_display_name"] setting.
+
+2007-07-08 v1.1.0
+
+    - Made the module compatible with 5.2.
+
+2007-07-07 v1.0.1
+
+    - Also store the user_id for the recent author per forum and create
+      the template variable {FORUMS->URL->PROFILE} for each forum, which
+      isset and points to the use profile if the user is a registered
+      user.
+
+2007-05-19 v1.0.0
+
+    - Initial revision
+

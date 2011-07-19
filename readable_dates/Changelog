@@ -1,0 +1,132 @@
+Changelog:
+----------
+
+2011-01-09 v1.1.11
+
+    - Added new German language files. Thanks to Oliver Riesen!
+
+2010-04-26 v1.1.10
+
+    - The original dates are now available as $data['orig_<datefield>'], so
+		  they can still be accessed when needed from the templates.
+
+2009-08-26 v1.1.9
+
+    - Added support for the Russian language. Also added a Russian language
+      file. Thanks to phorum.org user sailord for the translation!
+
+    - Added a Spanish translation. Thanks to Chris Brown!
+
+    - Added a French translation. Thanks to phorum.org user manuvb!
+
+2008-12-14 v1.1.8
+
+    - Fixed a typo that caused "date_last_active" for the user profile
+      screen to never be formatted by this module.
+
+2008-07-25 v1.1.7
+
+    - Added a switch in the module config to enable/disable the formatting
+      of the user registration date on the read pages (Registered: ... ago).
+      If this switch is enabled, then dates after the configured time
+      limit will be formatted using a standard short date. This is different
+      from Phorum's default behavior, because by default Phorum would
+      use a readable date-like formatting for this date already.
+
+2008-05-28 v1.1.6
+
+    - Another undefined index warning fixed and again it was CBiLL
+      who was kind enough to be the lab rat.
+
+2008-03-26 v1.1.5
+
+    - Some more undefined index warnings fixed. These would occur if user
+      activity tracking is disabled or if the user hides its activity
+      through the privacy settings. Thanks to CBiLL for the report!
+
+    - A configuration option was added to make it possible to disable
+      the readable numbers (one, two, three instead of 1, 2, 3).
+
+2008-03-11 v1.1.4
+
+    - Fixes for some undefined index warnings in readable_dates.php.
+      Thanks to CBiLL for the heads up!
+
+2008-03-03 v1.1.3
+
+    - Added support for formatting dates in the private message and buddy
+      interfaces (pm list, pm read, buddy list). These features need Phorum
+      version 5.2.7 or higher (the admin interface will warn about this if
+      an older version of Phorum is used).
+
+2008-03-02 v1.1.2
+
+    - Added an option to specify the maximum time for which a date
+      should be formatted by this module. Dates that are older will be
+      displayed using their original formatting. Thanks to CBiLL for
+      the feature suggestion.
+
+    - Fixed a bug, which resulted in empty dates being formatted as
+      if the date was Januari 1st, 1970 (Epoch zero). Thanks to
+      CBiLL for the bug report.
+
+2008-03-01 v1.1.1
+
+    - Added a better German translation to the package. Thanks to Thomas
+      for fixing my crappy German translation!
+
+    - Fixed the formatting code to make sure that it will work
+      correctly in localized environments.
+
+2008-03-01 v1.1.0
+
+    - Rewrote the module to be compatible with 5.2 and to make full
+      use of new Phorum features.
+
+2006-05-08 v1.0.7
+
+    - Fixed typo: "Las edit was" -> "Last edit was" (thanks CBiLL).
+
+2006-03-28 v1.0.6
+
+    - Do a restore for time formats at the end of the list and the
+      read hook, as suggested by Oliver Riesen. This will take away
+      some problems with other modules that are using time formatting
+      as well (but probably not all of them, in case date formatting
+      is run before the list/read hooks).
+
+2006-03-01 v1.0.5
+
+    - The script did not load the right defaults.php file.
+
+    - Even more fixes for TZ handling. Users that have a timezone
+      set in the control center should now get a correct 
+      date too when using this mod.
+
+2006-01-20 v1.0.4
+
+    - Some more fixes for correct TZ handling. The previous version was
+      trying to fix problems in the wrong place, which caused unexpected
+      side-effect problems.
+
+    - The dates on the read page can now be formatted as well.
+
+    - A settings screen has been added. In the settings you can configure
+      on which pages you want to apply the readable date formatting.
+
+2006-01-19 v1.0.3
+
+    - Some fixes for correct TZ handling (as suggested by regdos)
+
+2006-01-17 v1.0.2
+
+    - wrong datafield used for lastpost formatting (reported by regdos)
+
+2006-01-16 v1.0.1
+
+    - Minor fix in French and German language packages
+
+2006-01-10 v1.0.0
+
+    - Initial release
+

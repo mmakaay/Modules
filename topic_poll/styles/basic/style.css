@@ -1,0 +1,20 @@
+#topic_poll {
+   width: 90%;
+}
+
+#topic_poll #topic_poll_details {
+    white-space: nowrap;
+    border: 1px solid #888;
+    background-color: #f0f0f0;
+    padding: 10px;
+    line-height: 1.2em;
+    float: right;
+}
+
+#topic_poll.topic_poll_results #topic_poll_answers table {
+    border-top: 1px dashed #ddd;
+}
+
+#topic_poll.topic_poll_results #topic_poll_answers table td {
+    border-bottom: 1px dashed #ddd;
+}

@@ -1,0 +1,16 @@
+title: BBcode Spoiler
+desc: This module adds the bbcode [spoiler]...[/spoiler], which can be used for adding a spoiler to a message (a spoiler is information that you do not want to show right away to the reader of the message, e.g. a movie plot or a solution to a puzzle, because that could spoil some fun for the reader). The reader can then decide on his own whether he wants to read the spoiler or not.
+version: 1.0.9
+author: Maurice Makaay
+url: http://www.phorum.org/phorum5/read.php?62,124591
+category: bbcode
+
+hook: css_register|phorum_mod_bbcode_spoiler_css_register
+hook: javascript_register|phorum_mod_bbcode_spoiler_javascript_register
+hook: common|phorum_mod_bbcode_spoiler_common
+hook: format|phorum_mod_bbcode_spoiler_format
+hook: addon|phorum_mod_bbcode_spoiler_addon
+hook: editor_tool_plugin|phorum_mod_bbcode_spoiler_editor_tool_plugin
+hook: cc_save_user|phorum_mod_bbcode_spoiler_cc_save_user
+hook: lang|
+

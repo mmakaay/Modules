@@ -1,0 +1,16 @@
+Changelog
+README
+MANIFEST
+filelist.php
+info.txt
+rewrite_rules.src
+lang/english.php
+lang/dutch.php
+lang/german.php
+lang/german_du.php
+lang/french.php
+settings.php
+templates/emerald/filelist.tpl
+templates/emerald/listtable_body.tpl
+templates/emerald/listtable_header.tpl
+

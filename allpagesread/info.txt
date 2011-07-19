@@ -1,0 +1,11 @@
+title: All pages link for flat read mode
+desc: This module adds an "All" link to the paging links in flat read mode (e.g. "Goto Page: 1 2 3 All"). Users can click this link to view all messages for a thread on a single page.
+version: 1.0.5
+require_version: 5.1.0
+author: Yuri Abramenkov and Maurice Makaay
+category: user_features
+
+hook:  lang|
+hook:  common|mod_allpagesread
+hook:  list|mod_allpagesread_createlink
+hook:  read|mod_allpagesread_createlink

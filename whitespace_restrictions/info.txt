@@ -1,0 +1,10 @@
+title: Whitespace Restrictions
+desc: This module can be used to restrict the use of excessive whitespace in messages, by trimming down the whitespace at formatting time.
+version: 1.0.0
+author: Phorum Dev Team
+url: http://www.phorum.org/
+
+hook: format_fixup|phorum_mod_whitespace_restrictions_format_fixup
+
+priority: run hook format_fixup after *
+

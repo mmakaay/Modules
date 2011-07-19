@@ -1,0 +1,8 @@
+title: Breadcrumbs 'Home' to External Site
+desc: This module can be used to modify the breadcrumbs of Phorum in such way that the original 'Home' breadcrumb is renamed to 'Forums' and that a new 'Home' link is prepended. The new 'Home' link can be configured to point to an arbitrary URL.
+category: viewlayout
+url: http://www.phorum.org/phorum5/read.php?62,147463
+version: 1.0.0
+
+hook: start_output|phorum_mod_breadcrumbs_home_to_external_site
+

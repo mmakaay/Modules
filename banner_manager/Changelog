@@ -1,0 +1,26 @@
+Changelog:
+----------
+
+2009-06-11 v1.0.4
+
+    - Made the module compatible with the CSRF protection in Phorum 5.2.11.
+
+2008-07-31 v1.0.3
+
+    - Added date ranges for banners.
+      Mod proposal provided by Phorum.org user: sheik
+
+2008-01-13 v1.0.2
+
+    - Fixed a problem with including the settings panels.
+
+2006-03-29 v1.0.1
+
+    - Restructured the settings panel code over multiple files for more
+      code clarity and for fixing some strange problems with the program
+      flow in the settings pages.
+
+2006-03-28 v1.0.0
+
+    - Initial revision
+

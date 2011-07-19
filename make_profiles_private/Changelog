@@ -1,0 +1,19 @@
+Changelog:
+----------
+
+2009-07-25 v1.0.1 by Maurice Makaay
+
+   - Fixed a little bug that caused the login check to fail.
+
+   - After logging in, the browser was sent back to the "you need to login"
+     page. Now, the user that logged in will be redirected to the
+     profile page that the user was originally visiting.
+
+   - Implemented language support for the module.
+
+   - Added a README and Changelog.
+
+2009-07-25 v1.0.0 by Ravenswood
+
+   - Initial release
+

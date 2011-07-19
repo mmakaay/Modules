@@ -1,0 +1,17 @@
+Module  : Hide Cancel In Editor
+Version : 1.0.0
+Author  : Maurice Makaay
+
+This mod hides the cancel button in all posting editor screens.
+
+Install:
+--------
+
+- Install this file in the directory "mods" within your
+  Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Hide Cancel In Editor".
+

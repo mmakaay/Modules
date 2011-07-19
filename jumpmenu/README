@@ -1,0 +1,63 @@
+Module  : Jumpmenu
+Version : 1.2.0
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module adds a menu to the Phorum pages, which can be used to quickly
+select a forum to jump to. Forum folders will be shown as submenus.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "jumpmenu" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Jumpmenu".
+
+
+Customization:
+--------------
+
+This module makes use of module templates. If you want to modify the
+templates to make them work better for your site's template, then do not
+edit the template files that were in the module distribution. Instead,
+copy the full directory "mods/jumpmenu/templates/emerald" to
+"mods/jumpmenu/templates/yourtemplatename" (asuming that your site's
+template is stored as "templates/yourtemplatename") and edit the files
+in the new directory. Phorum will automatically recognize that you have
+created a specific template set to use for your site's active template.
+
+The available template files are:
+
+- css.tpl           : Code to add to the CSS code for the page.
+                      This can be used to add overrides for the default
+                      CSS definitions from the file templates/jumpmenu.css.php
+
+- before_footer.tpl : Code that will be loaded in the before_footer hook.
+                      This code is used to setup the element with
+                      id="mod_jumpmenu_root" (which is the root for the menu)
+                      and to run the menu building code.
+
+If you want to create your own root item for the menu, then you can edit
+your main Phorum template to include some element that has
+id="mod_jumpmenu_root" in its properties. The Jumpmenu module wil
+automatically use that one as the root element, for example:
+
+  <a id="mod_jumpmenu_root">
+    Open the forum menu ...
+  </a>
+
+By default, the orientation of the menus is to the right. If you need the
+menus to be oriented to the left, then you can add rel="mod_jumpmenu_left"
+to the root element, for example:
+
+  <a id="mod_jumpmenu_root" rel="mod_jumpmenu_left">
+    Open the forum menu ...
+  </a>
+
+

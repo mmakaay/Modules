@@ -1,0 +1,24 @@
+#topic_poll {
+}
+
+#topic_poll #topic_poll_header {
+}
+
+#topic_poll #topic_poll_title {
+}
+
+#topic_poll #topic_poll_header #topic_poll_details {
+}
+
+#topic_poll #topic_poll_question {
+}
+
+#topic_poll #topic_poll_answers,
+#topic_poll #topic_poll_answers table td {
+}
+
+.topic_poll_button {
+}
+
+#topic_poll #topic_poll_answers .topic_poll_percentage_bar {
+}

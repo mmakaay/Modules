@@ -1,0 +1,38 @@
+Module  : All pages link for flat read mode
+Version : 1.0.5
+Author  : Yuri Abramenkov
+Patches : Maurice Makaay
+
+This module adds an "All" link to the paging links in flat read mode
+(Goto Page: 1 2 3 All). Users can click this link to view all messages
+for a thread on a single page.
+
+To prevent high system load because of too many messages being loaded
+at once, the administrator can configure the maximum number of messages
+in a thread for which this link is still shown.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "allpagesread" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "All pages link for flat read mode".
+
+
+Localization:
+-------------
+
+This module supports localization through the language files in the
+lang directory. If your language is not supported by the module, copy
+english.php to <yourlanguage>.php and update the language strings in it.
+
+If you create a new language file, please post it to the Phorum forums,
+so it can be added to this distribution.
+

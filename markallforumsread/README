@@ -1,0 +1,59 @@
+Module  : Mark All Forums Read
+Version : 1.0.9
+Author  : Maurice Makaay
+
+Displays a link to mark all forums read on the forum index page.
+
+Troubleshooting note:
+There was a problem in the database layers before Phorum version 5.1.16,
+that caused announcements not to be marked read in a forum when the forum
+was marked read. So if new messages are available in the forum after
+clicking the mark all forums read link, then they might be announcements.
+Upgrading Phorum should fix this.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "markallforumsread" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Mark All Forums Read".
+
+- Configure the module through the module's settings page.
+
+
+Customization:
+--------------
+
+Using the options in the module settings, you can automatically display
+the link for marking all forums read after the header and/or before the
+footer. If you want to create your own links by editing the templates
+(index_classic.tpl / index_new.tpl), then you can disable the
+automatic displaying options and make use of the following template
+variables:
+
+  {URL->MARKALLFORUMSREAD}     the url for marking the forums read
+  {MARKALLFORUMSREAD_NEWCOUNT} the number of new messages available
+  {MARKALLFORUMSREAD_LINK}     the full formatted link
+
+Using these template variables, you could for example create the following
+link in your template, to display a link that is only visible in case
+there are new messages available:
+
+  {IF URL->MARKALLFORUMSREAD}
+    {IF MARKALLFORUMSREAD_NEWCOUNT}
+      <a href="{URL->MARKALLFORUMSREAD}">
+        {LANG->MarkAllForumsRead}
+      </a>
+    {/IF}
+  {/IF}
+
+Mind that you'll have to check if {IF URL->MARKALLFORUMSREAD} is set, so
+the link won't be displayed for visitors that are not logged in.
+

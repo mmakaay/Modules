@@ -1,0 +1,9 @@
+title: Forum Stats
+require_version: 5.2.4
+version: 0.9.4
+desc: This module can show a couple of statistics about your forums at the bottom of the page (number of topics, number of posts, number of users, newest member).
+author: Thomas Seifert
+category: viewlayout
+
+hook: before_footer|mod_forumstats
+hook: lang|

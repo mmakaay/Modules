@@ -1,0 +1,105 @@
+Changelog:
+----------
+
+2008-01-02 1.13 Maurice Makaay
+
+   - Cleaned up some code.
+
+   - The language strings are now put in their own "mod_new_count"
+     namespace below $PHORUM['LANG'].
+
+   - Added an extra template variable {MESSAGES->new_count} for the
+     list.tpl page, that does not contain a fully formatted new count
+     string, but only the number of new messages.
+
+   - Extended the documentation for describing how to extend the list.tpl
+     template to show the number of new messages in the "emerald" template.
+
+1.12 Maurice Makaay
+
+   - Fixed another couple of small undefined index warnings.
+
+1.11 Maurice Makaay
+
+   - Fixed PHP warning that was shown in case no forums were defined at all.
+
+1.10 Maurice Makaay
+
+   - PHP warnings were shown in case there was a "thread moved" notification
+     in the forum. These notifications are now skipped when counting new
+     messages for the message list.
+
+   - Modified the module, so now it will work for both Phorum 5.1 and 5.2.
+
+   - Removed the need for the common hook in the code (it was used for
+     setting up some data to prevent undefined index warnings later on,
+     but this could be handled more gracefully).
+
+1.9.2 Oliver Riesen
+
+   - Changed the module to work with Phorum 5.2, because of some changes
+     that were made in that version for formatting numbers.
+
+   - Fixed some HTML validation errors as reported by chanh.
+
+1.9 Maurice Makaay
+
+   - Added a settings screen so now users of this module can choose to
+     either show the totals automatically in the header or hack the
+     templates to exactly show it where they like it to be.
+
+   - Another setting has been added to configure if the totals for
+     the index and list pages should be displayed in case no new
+     messages are available. Hiding was the default behaviour in the
+     previous versions.
+
+   - Displaying of forum totals for the list view now also works when in
+     threaded view.
+
+   - Migrated information about the module from the module code
+     to a README and Changelog file.
+
+   - Added a new localization option, so languages that use multiple
+     plural words can set them in the language strings (you can now
+     define the default new_count_single and new_count_multiple, but
+     also new_count_2, new_count_3, etc.).
+
+   - Added a Dutch translation for the module.
+
+1.8 Brian moon
+
+   - made the code work as expected in list for the totals. Added total
+     thread count. Made language vars available to templates.
+
+1.7 Panu Artimo
+
+   - Added Total new count for all threads by CBiLL's request, you need
+     to hack list-template to see it
+
+1.6 Panu Artimo
+
+   - prevent error/warning when there's no newinfo or messageid's
+
+1.5 Panu Artimo
+
+   - Use Phorums internal module localisation system, cosmetic changes/fixes
+
+1.4 Panu Artimo
+
+   - Don't count new messages if not logged in and if threaded list view
+     is in use, I quess counting of new messages finally works as it's
+     supposed to.
+
+1.3 Panu Artimo
+
+   - Forgot to put back the check for minid
+
+1.2 Panu Artimo
+
+   - Trashed the query, it was wrong anyway. Get all msg_id's in
+     thread from $message
+
+1.1 Panu Artimo
+
+   - Uses existing list-hook instead of hack.
+

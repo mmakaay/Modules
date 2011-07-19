@@ -1,0 +1,3 @@
+- Better spam hurdles integration.
+- Disable the editor after the user clicks on the post button.
+- & -> &amp; problem, javascript doesn't need escaped HTML.

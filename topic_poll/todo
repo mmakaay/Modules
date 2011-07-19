@@ -1,0 +1,4 @@
+- configure subject icon yes/no
+- add template vars for use in own templates
+- cleanup orphin answers through admin tool
+- mass configuration of forums -> push settings to all of them.

@@ -1,0 +1,10 @@
+title: Format Signatures
+desc: This module can be used to add formatting to signatures (e.g. showing signatures in a different color or adding a separator line between the body and the signature).
+author: Maurice Makaay
+url: http://www.phorum.org/phorum5/read.php?62,127574
+version: 1.0.1
+category: viewlayout
+
+hook: read_user_info|phorum_mod_format_signatures_read_user_info
+hook: format|phorum_mod_format_signatures_format
+

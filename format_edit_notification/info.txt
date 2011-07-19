@@ -1,0 +1,10 @@
+title: Format Edit Notification
+desc: This module can be used to change the formatting of the message edit notification (e.g. use less space between the body and notification, use a smaller font, etc.)
+author: Maurice Makaay
+url: http://www.phorum-support.de/
+version: 1.0.2
+category: viewlayout
+
+hook: common|phorum_mod_format_edit_notification_common
+hook: format|phorum_mod_format_edit_notification_format
+

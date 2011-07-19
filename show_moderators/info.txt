@@ -1,0 +1,14 @@
+title: Show Moderators
+desc: Show the moderators for a forum on the index, list and/or read pages.
+author: Maurice Makaay <maurice@phorum.org>
+url: http://www.phorum.org/phorum5/read.php?62,125053
+version: 1.0.1
+require_version: 5.2.0
+category: viewlayout
+
+hook: index|phorum_mod_show_moderators_index
+hook: list|phorum_mod_show_moderators_list
+hook: read|phorum_mod_show_moderators_read
+hook: before_footer|phorum_mod_show_moderators_before_footer
+hook: lang|
+

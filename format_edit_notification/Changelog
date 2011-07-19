@@ -1,0 +1,20 @@
+Changelog:
+----------
+
+2008-12-07 1.0.2
+
+    - Added support for the Readable Dates module. That module uses a custom
+      edit message for replacing the original one. Replacing the edit
+      message with the edit message from the Readable Dates module
+      stripped our special markers, causing this module to not recognize
+      the edit message anymore.
+
+2007-12-08 1.0.1
+
+    - Default settings were not seen, because they were not set in
+      the global $PHORUM variable.
+
+2007-09-27 1.0.0
+
+    - Initial release
+

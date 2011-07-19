@@ -1,0 +1,22 @@
+Module  : Remember Username
+Version : 1.1.0
+Author  : Maurice Makaay
+
+This module will store the Phorum username that was last used in
+a cookie. When entering the login screen, the username will be
+automatically filled in, based on this cookie.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "remember_username" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Remember Username".
+

@@ -1,0 +1,35 @@
+Module  : Topic Poll
+Version : 1.0.20
+Author  : Maurice Makaay <maurice@phorum.org>
+
+*** IMPORTANT ***
+This module requires Phorum 5.1.23 or higher.
+It will not work for versions of Phorum prior to this versions.
+
+This module makes it possible to add polls to forum topics. For each
+forum the administrator can configure who can create polls. Features:
+
+o Admin interface that allows for a specific configuration for each forum.
+o CSS based styles, each forum can have its own style.
+o Revoking votes for registered users who have voted.
+o Polls can be for registered users only or for all visitors.
+o It is possible to hide all thread replies until the visitor casts a vote.
+o Anonymous vote tracking is done using a combi of cookies and IP blocking.
+o Easy poll editor for users, implemented as a separate posting editor screen.
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "topic_poll" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Topic Poll";
+
+- After this, go to the module's settings screen to configure
+  the options for this module.
+

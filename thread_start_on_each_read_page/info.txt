@@ -1,0 +1,4 @@
+title: Thread start on each read page
+desc: This module can be used to display the thread starting message on each read page. This way, the thread starting message can always be kept visible, while the user can browse the thread reply messages.
+version: 1.0.0
+hook: read|phorum_mod_thread_start_on_each_read_page_read

@@ -1,0 +1,11 @@
+Upgrading jQuery Lightbox:
+--------------------------
+
+Upgrading the jQuery Lightbox code is pretty simple:
+
+- Download lightbox from http://leandrovieira.com/projects/jquery/lightbox/
+- Unpack the downloaded zip file.
+- Move the unpacked files to the code subdirectory.
+- Delete index.htm, photos and js/jquery.js from the code.
+- Update function.php and update the JQUERY_LIGHTBOX_VERSION
+

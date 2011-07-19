@@ -1,0 +1,23 @@
+title: Embed Images
+desc: This module implements several image viewers that can be used for viewing images inside forum messages. The images are shown as scaled down thumbnails in the message, so large images won't break the page layout. By clicking the image, the users can view the full size image in the configured viewer.
+version: 1.1.4
+require_version: 5.2.16
+author: Maurice Makaay <maurice@phorum.org>
+url: http://www.phorum.org/phorum5/read.php?62,125584
+category: embed_content
+
+hook: lang|
+hook: javascript_register|phorum_mod_embed_images_javascript_register
+hook: css_register|phorum_mod_embed_images_css_register
+hook: common|phorum_mod_embed_images_common
+hook: after_header|phorum_mod_embed_images_after_header
+hook: format|phorum_mod_embed_images_format
+hook: format_fixup|phorum_mod_embed_images_format_fixup
+hook: render_embedded_attachment|phorum_mod_embed_images_render_embedded_attachment
+hook: addon|phorum_mod_embed_images_addon
+hook: bbcode_register|phorum_mod_embed_images_bbcode_register
+
+# Make sure the embed_attachments module handles [attachment] tags
+# before this module runs.
+priority: run hook format after embed_attachments
+

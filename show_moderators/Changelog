@@ -1,0 +1,14 @@
+Changelog:
+----------
+
+2008-01-02 v1.0.1
+
+    - The defaults.php file should use $GLOBALS['PHORUM'] instead of
+      $PHORUM, otherwise the defaults won't work. Thanks to Thomas
+      for the heads up.
+
+    - Added new German language files. Thanks to Oliver Riesen!
+
+2007-10-30 v1.0.0
+
+    - Initial release

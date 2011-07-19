@@ -1,0 +1,62 @@
+Changelog:
+----------
+
+2011-03-28 v1.0.11
+
+    - Added wmode="transparent" to the <embed> tags, which fixes problems
+      with movies overlapping HTML elements that should have been overlapping
+      the movie instead.
+
+2009-05-21 v1.0.10
+
+    - Added a language string "enter video url" for the URL prompt window.
+
+2007-11-03 v1.0.9
+
+    - Implemented the javascript_register hook.
+      This requires Phorum 5.2.2 or newer.
+
+2007-11-01 v1.0.8
+
+    - Honor the "disable bbcode for this post" flag (a feature of the
+      BBcode module).
+
+2007-10-14 v1.0.7
+
+    - Added support for www.break.com and www.ebaumsworld.com URLs.
+
+2007-07-09 v1.0.6
+
+    - Added support for www.vimeo.com and vimeo.com URLs.
+
+2007-07-07 v1.0.5
+
+    - Added an option to display a video button in the Editor Tools bar.
+
+2007-07-07 v1.0.4
+
+    - Added vimeo.com video support.
+
+2007-06-13 v1.0.3
+
+    - Removed <object> tag from the embedding code, because that can cause
+      some weird conflicts with MSIE browsers in combination with JavaScript
+      code. I've seen conflicts with the Slimbox script (mootools based
+      lightbox) on my site, but there are other scripts which show the
+      same problem, judging the number of reports about the problem.
+
+      Since <embed> seems to work for all browsers that I tested, I stick
+      to that for now and leave the <object> code for the future.
+
+2007-06-13 v1.0.2
+
+    - Made Google video support work for international Google mirrors too.
+
+2007-06-13 v1.0.1
+
+    - Added Google video support.
+
+2007-06-13 v1.0.0
+
+    - Initial revision
+

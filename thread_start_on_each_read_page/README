@@ -1,0 +1,65 @@
+Module  : Thread start on each read page
+Version : 1.0.0
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module can be used to display the thread starting message on
+each read page. This way, the thread starting message can always be kept
+visible, while the user can browse the thread reply messages.
+
+This supports implementing a structure like often seen on blogs
+or news message sites with a comment system.
+
+Template changes are needed for this module. Below, you will
+find information about the required changes.
+
+
+Installation instructions:
+--------------------------
+
+- Unpack the archive;
+
+- Move the directory "thread_start_on_each_read_page" to the
+  directory "mods" within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Thread start on each read page".
+
+
+Template changes:
+-----------------
+
+* Add the thread starting message to read.tpl
+
+  This module will make the thread starting message available on every read
+  page through the template variable {THREAD}. Before the {LOOP MESSAGES}
+  loop in the read template, you can implement a block of template code for
+  displaying the thread starting message, using this variable.
+
+  You can use the same kind of code that is used within the {LOOP MESSAGES}
+  loop, but instead of {MESSAGES->somevariable} you can use
+  {THREAD->somevariable}.
+
+* Skip the first message in the MESSAGES loop in read.tpl
+
+  The thread starting message is not removed from the MESSAGES template
+  variable. Doing so from the module code would confuse the rest of the Phorum
+  code, which really likes to see the thread starting message in that array.
+  Furthermore, keeping the thread starting message in the array makes it
+  possible to apply the template change to only the flat read template
+  (read.tpl). The threaded templates will keep working like they did before
+  installing this mod.
+
+  Because of the above, you have to implement a bit of code in the read
+  template for skipping the thread starting message. The following code will
+  take care of this:
+
+  {LOOP MESSAGES}
+  +------------ add this code to the start of the MESSAGES loop --------------+
+  |   {! Skip the thread starting message. It's handled separately. }         |
+  |   {IF NOT MESSAGES->parent_id}<?php continue; ?>{/IF}                     |
+  +---------------------------------------------------------------------------+
+      ... original MESSAGES loop code ...
+  {/LOOP MESSAGES}
+

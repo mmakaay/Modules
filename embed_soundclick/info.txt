@@ -1,0 +1,13 @@
+title: Embed Soundclick
+desc: Soundclick is a web site (http://www.soundclick.com) where musicians can post their audio and video files. This module recognizes Soundclick URLs in messages and replaces them with embedded players, so the files can be played directly from the message.
+version: 1.0.2
+require_version: 5.2.2
+author: Maurice Makaay <maurice@phorum.org>
+url: http://www.phorum-support.de/
+category: embed_content
+
+hook: format|phorum_mod_embed_soundclick_format
+hook: format_fixup|phorum_mod_embed_soundclick_format_fixup
+hook: render_embedded_attachment|phorum_mod_embed_soundclick_render_embedded_attachment
+hook: css_register|phorum_mod_embed_soundclick_css_register
+

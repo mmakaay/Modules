@@ -1,0 +1,15 @@
+title: Empty Bodies
+desc:  Allow empty bodies in messages, so forum users can commit quick comments by only using the subject line. The module will also add a string to the subject and body to identify empty messages. These strings can be customized through the language files.
+version: 1.1.0
+author: Thomas Seifert and Maurice Makaay
+require_version: 5.2.0
+category: posting
+
+hook:  lang|
+hook:  common|phorum_mod_empty_bodies_common
+hook:  before_editor|phorum_mod_empty_bodies_before_editor
+hook:  before_post|phorum_mod_empty_bodies_post
+hook:  before_edit|phorum_mod_empty_bodies_post
+hook:  format|phorum_mod_empty_bodies_format
+
+priority: run hook format before *

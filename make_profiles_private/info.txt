@@ -1,0 +1,10 @@
+title: Make Profiles Private
+desc: This module prevents people from seeing profiles unless they are logged in.
+version: 1.0.1
+author: James Lehmann a.k.a. Ravenswood
+url: http://www.scriptmonkeys.us/
+category: admin
+
+hook: lang|
+hook: page_profile|phorum_mod_make_profiles_private_page_profile
+hook: addon|phorum_mod_make_profiles_private_display

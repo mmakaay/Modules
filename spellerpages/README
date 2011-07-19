@@ -1,0 +1,94 @@
+Module  : Speller Pages
+Version : 1.0.6
+Author  : Maurice Makaay
+
+Spellchecking based on aspell and Speller Pages v0.5.1. This module will add
+a "Check spelling" button to the editor, which users can use to have
+their message spell checked.
+
+For more information on Speller Pages, see http://spellerpages.sourceforge.net
+
+This module requires Phorum 5.1.5-beta or later to work correctly.
+
+Install:
+--------
+
+- Make sure you have GNU aspell installed on your system. Without
+  aspell, the spelling checker will not work. For more info on this,
+  see http://aspell.net/
+  If you are hosting your website with a hosting provider, then you will
+  have to contact them if you want to have aspell installed;
+
+- Unpack the Speller Pages module archive;
+
+- Move the directory "spellerpages" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Speller Pages".
+
+
+Localization:
+-------------
+
+Speller Pages does not really support localization. If you need a localized
+version of the spellchecker, copy the directory spellerpages/speller in 
+this distribution to spellerpages/speller-<language name>. Then translate
+all the strings you want and update the server-script file
+spellerpages/speller-<language name>/server-scripts/spellchecker.php to
+use the language that you want.
+
+Copy templates/emerald/spellChecker.js.tpl to
+templates/emerald/<language name>-spellChecker.js.tpl and update that file
+to let the this.popUpUrl variable point to the speller-<language name>
+directory from above (take a look at the Dutch translation for an example.)
+
+As long as you use a <language name> that matches the name of your main
+language, the module will automatically recognize the availability of a
+translated version of the spellchecker and load that one instead of the
+default English one.
+
+You'll also have to add a file to the lang directory of the module to
+translate the button which starts the spellchecker.
+
+
+Instructions for upgrading Speller Pages (mostly for the package mainainer):
+----------------------------------------------------------------------------
+
+* Download a new distribution from http://spellerpages.sourceforge.net
+
+* Unpack the distribution and place the distribution files
+  in the speller directory
+
+* Move the old "spellerpages" directory aside
+
+* Rename the new distribution directory to "spellerpages"
+
+* Place a .htaccess file in the spellerpages directory with in there 
+  "allow from all" (else the files in there can't not be read by the 
+  webserver, because the mods directory contains a .htaccess which 
+  denies access to all)
+
+* Move spellerpages/speller/spellChecker.js to
+  templates/emerald/spellChecker.js.tpl
+
+  Set the following configuration options in that file:
+
+  this.popUpUrl = '{URL->HTTP_PATH}' +
+                  '/mods/spellerpages/spellerpages/speller' +
+                  '/spellchecker.html';
+  this.spellCheckScript = 'server-scripts/spellchecker.php';
+  this.popUpProps = "menu=no,width=440,height=350,resizable=yes,status=yes";
+
+* Edit spellerpages/speller/server-scripts/spellchecker.php and
+  set the following config options:
+
+  $spellercss = '../spellerStyle.css';
+  $word_win_src = '../wordWindow.js';
+  $lang = 'EN';
+  $tempfiledir = "/tmp";
+
+* This should be all. Now test the spell checker.
+

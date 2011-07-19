@@ -1,0 +1,45 @@
+Module  : HTML in Messages
+Version : 2.0.0
+Author  : Phorum Dev Team
+
+This module allow HTML to be used in forum messages. This includes allowing
+special characters that are HTML encoded.
+
+The module makes use of the HTML Purifier library to filter the HTML code.
+This filtering is done to prevent visitors from adding cross site scripting
+(XSS) code to their messages. In addition to filtering for security, the
+HTML Purifier also takes care of cleaning up the visitor's HTML code, by
+preventing errors in the code from breaking the page layout. E.g. "<b>Hello"
+would be turned into "<b>Hello</b>".
+
+For more information on HTML Purifier, please visit http://htmlpurifier.org
+
+Install:
+--------
+
+- Unpack the archive and move the directory "html" to the directory
+  "mods" within your Phorum installation.
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "HTML".
+
+- Go to the settings screen for the module to configure the module.
+  You will have to select the HTML doctype that you are using in your
+  templates. If you are using a (modified) standard Phorum template,
+  then you can go with the default value "XHTML 1.0 Transitional".
+
+
+Upgrading HTML Purifier:
+------------------------
+
+To upgrade HTML Purifier:
+
+- Download a new HTML Purifier release, type "stand alone";
+- Unpack that release in the HTML module's directory;
+- Update the HTMLPURIFIER_PATH definition in html.php;
+- Place a copy of the LGPL license in the HTML Purifier directory.
+
+That should be all.
+

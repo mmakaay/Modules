@@ -1,0 +1,27 @@
+Module  : Customize Mail Messages
+Version : 1.0.0
+Author  : Maurice Makaay
+
+This module can be used to customize the mail messages that are sent out
+by Phorum. You can also do this by editing the language files, but using
+this module, you won't have to be afraid of overwriting the modified
+language file(s) on upgrades.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "customize_mail_messages" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Customize Mail Messages".
+
+- Go to the settings screen for the module and customize the mail
+  messages to your likings.
+
+

@@ -1,0 +1,48 @@
+Module  : BBcode Spoiler
+Version : 1.0.9
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module adds the bbcode [spoiler]...[/spoiler], which can be used for
+adding a spoiler to a message (a spoiler is information that you do not
+want to show right away to the reader of the message, e.g. a movie plot
+or a solution to a puzzle, because that could spoil some fun for the reader).
+The reader can then decide on his own whether he wants to read the spoiler
+or not.
+
+The spoiler is implemented in such way that the spoiler data is not loaded
+at all. This way, it is guaranteed that the spoiler data is invisible, even
+if the user is using a text browser like "lynx" or if the user is viewing
+the page source. When the reader clicks the link to open the spoiler, then
+the spoiler content is loaded using a JavaScript Ajax request. For browsers
+that do not support this technology, a fallback URL is provided, which will
+reload the page with the requested spoiler data visible. For these reasons,
+the accessibility of this spoiler module is very good.
+
+Examples:
+
+  [spoiler=The ending of movie FooBar]
+  In the end, they wake up and it all appears to be just a bad dream.
+  Mister Baz brushes his teeth, grabs some bread and takes off to work.
+  His wife remains silent ever after.
+  [/spoiler]
+
+  How much is 10 times 5?
+  [spoiler]50, but you could have computed that yourself![/spoiler]
+
+
+Installation:
+-------------
+
+- Unpack the archive;
+
+- Move the directory "bbcode_spoiler" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "BBcode Spoiler".
+
+- Go to the settings page of the BBcode Spoiler module to configure
+  the module.
+

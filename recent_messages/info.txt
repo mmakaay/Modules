@@ -1,0 +1,16 @@
+title: Recent Messages
+desc: This module implements an addon page, which displays the most recent messages to the user.
+version: 2.1.1
+author: Maurice Makaay
+url: http://www.phorum.org/phorum5/read.php?62,125518
+require_version: 5.2.8
+category: search
+category: user_features
+
+hook: css_register|phorum_mod_recent_messages_css_register
+hook: start_output|phorum_mod_recent_messages_start_output
+hook: addon|phorum_mod_recent_messages_addon
+hook: jumpmenu_add|phorum_mod_recent_messages_jumpmenu_add
+hook: ajax_mod_recent_messages|phorum_mod_recent_messages_ajax
+hook: lang|
+

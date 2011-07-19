@@ -1,0 +1,9 @@
+title: Signature Restrictions
+desc: This module implements configurable features for enforcing signature restrictions. The module will check the signature when it is stored in the control center by the user and show an error to the user if the new signature does not meet the restrictions.
+version: 1.0.2
+author: Maurice Makaay
+url: http://www.phorum.org/phorum5/read.php?62,124255
+
+hook: cc_save_user|phorum_mod_signature_restrictions_cc_save_user
+hook: lang|
+

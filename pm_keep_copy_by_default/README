@@ -1,0 +1,21 @@
+Module  : PM Keep Copy enabled by default
+Version : 1.0.1
+Author  : Maurice Makaay
+
+This module will enable the "Keep a copy in my sent items" option by default
+when writing a new private message.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "pm_keep_copy_by_default" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "PM Keep Copy enabled by default".
+

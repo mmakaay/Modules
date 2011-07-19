@@ -1,0 +1,8 @@
+title: Hide Cancel In Editor
+desc: This mod hides the cancel button in all posting editor screens.
+version: 1.0.0
+author: Maurice Makaay
+category: posting
+category: viewlayout
+
+hook:  before_editor|phorum_mod_disable_cancel_in_posting

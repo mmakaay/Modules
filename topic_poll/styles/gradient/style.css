@@ -1,0 +1,22 @@
+#topic_poll {
+    border: 1px solid #797;
+    background: white url(background.jpg) repeat-x top;
+}
+
+#topic_poll #topic_poll_header {
+    color: white;
+}
+
+#topic_poll #topic_poll_question {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #797;
+    border-top: 1px solid #797;
+}
+
+#topic_poll #topic_poll_answers .topic_poll_percentage_bar {
+    border: 1px solid black;
+    background: #777 url(background.jpg) repeat-x;
+}

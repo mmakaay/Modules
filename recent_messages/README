@@ -1,0 +1,224 @@
+Module  : Recent Messages
+Version : 2.1.1
+Author  : Maurice Makaay
+
+This module implements an addon page, which displays the most recent
+messages / topics to the user. The user can:
+
+ * choose between showing new messages, new topics or updated topcis;
+ * choose how many messages / topics should be shown per page;
+ * show older messages using a paging mechanism;
+ * select a specific forum to show new messages for;
+ * show messages grouped by date, forums or folders.
+
+The module also supports loading the recent messages through a Phorum
+Ajax call, so a recent messages list can be easily embedded in a target
+page.
+
+For running this mod, you need Phorum 5.2.8 or later. It will not
+work for earlier versions of Phorum.
+
+
+Contents:
+1. Installation
+2. Template customization
+3. Use of the ajax interface
+4. Use of the "ajax_minimal" template
+
+
+1. Installation:
+----------------
+
+- Unpack the archive;
+
+- Move the directory "recent_messages" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Recent Messages".
+
+- Templates must be configured to show the link to the recent messages page.
+  Alter your template to suit your needs.
+
+
+2. Template customization:
+--------------------------
+
+To display the link to the recent messages page on various Phorum pages,
+you will have to edit the Phorum template files. In these template files,
+you can use the following template variables:
+
+  {URL->RECENT_MESSAGES}
+     The URL for the recent messages page
+
+  {LANG->mod_recent_messages->RecentMessages}
+     The text to use for the link / button that takes the user to the
+     recent messages page.
+
+
+Example template code for adding a hyperlink to a template:
+
+   <a href="{URL->RECENT_MESSAGES}">
+     {LANG->mod_recent_messages->RecentMessages}
+   </a>
+
+if you are adding the link to the Emerald template (the default Phorum 5.2
+template) or a template that is based on Emerald, then you can also use
+the following code to make it show an icon in front of the link.
+
+   <a class="icon icon-list" href="{URL->RECENT_MESSAGES}">
+     {LANG->mod_recent_messages->RecentMessages}
+   </a>
+
+For example, if you want the link to appear in the upper right corner of
+the page, then you can add the marked code from below to the file
+templates/emerald/header.tpl:
+
+    ......
+    ......
+    {! Code for anonymous users }
+    {ELSE}
+      <span class="welcome">{LANG->Welcome}!</span>
+      <a class="icon icon-key-go" href="{URL->LOGINOUT}">{LANG->LogIn}</a>
+      <a class="icon icon-user-add" ......
+    {/IF}
+   _____________________________________________________________
+  |                                                             |
+    <a class="icon icon-list" href="{URL->RECENT_MESSAGES}">
+    {LANG->mod_recent_messages->RecentMessages}
+    </a>
+  |_____________________________________________________________|
+
+    </div> <!-- end of div id=user-info -->
+    ......
+    ......
+
+
+3. Use of the ajax interface:
+-----------------------------
+
+For Phorum 5.3 and higher (at the time of writing, the stable version of
+Phorum is 5.2), this module supports loading a recent messages list on
+any another website, through the Phorum ajax interface. In earlier versions
+of Phorum, this is not supported.
+
+In the target page, use the following kind of code:
+
+  <script type="text/javascript"
+          src="http://your.site.com/phorum/javascript.php?core"></script>
+
+  <div id="mod_recent_messages_placeholder">
+    <noscript>
+      You can put a message in here for clients that do not have
+      JavaScript enabled. For JavaScript clients, the retrieved
+      recent messages data will be injected in the containing div.
+    </noscript>
+  </div>
+
+  <script type="text/javascript">
+  //<![CDATA[
+  $PJ(document).ready(function () {
+    Phorum.Ajax.call({
+        call         : 'mod_recent_messages',
+        show_amount  : null,
+        show_forum   : null,
+        view_type    : null,
+        group_by     : null,
+        template     : null,
+        content_only : null,
+        onSuccess    : function (result) {
+            $PJ('#mod_recent_messages_placeholder').html(result);
+        }
+    });
+  });
+  //]]>
+  </script>
+
+Some parameters can be used in the ajax call. When null or omitted, default
+values will be provided by Phorum. The parameters are:
+
+  show_amount    This is the number of messages to include in the
+                 return data (i.e. one "page").
+
+  page           This is the page offset to use.
+                 0 = the first page
+                 1 = the second page
+                 etc.
+
+  show_forum     When this is the id of a vroot (simply 0, when you have
+                 no vroots), messages from all forums will be shown.
+                 Otherwise, the parameter value will be used as the id of
+                 the forum for which to retrieve the recent messages.
+
+  view_type      The type of view. This is a numeric value, one of:
+                 0 = view recent messages
+                 1 = view recent threads
+                 2 = view recently updated threads
+
+  group_by       The grouping mechanism to use, one of:
+                 0 = no grouping
+                 1 = group by date
+                 2 = group by forum
+                 3 = group by folder
+
+  template       The template to use for rendering the output.
+                 By creating a custom module template for this module,
+                 you can let the ajax call format any kind of data.
+
+  content_only   When set to 1, the template variable {AJAX_CONTENT_ONLY}
+                 will be set. The template can use this variable to not
+                 output any header / footer data, but only the inner content.
+                 This can be used by a template, to implement loading of
+                 extra messages / threads rows via ajax and adding them to
+                 an existing block (previously loaded, with header / footer)..
+
+
+4. Use of the "ajax_minimal" template:
+--------------------------------------
+
+One special template is provided with the module: "ajax_minimal". If you
+use this template for the "template" parameter, then you will get output
+that is structured with <div>s only.
+
+Clear classes are added to these divs, so you already have a lot of
+flexibility in styling the message list through CSS, without having to
+create a custom template. The structure for this template's output is (prm
+in the class names = "phorum recent messages"):
+
+  <div class="prm-container">
+    <div class="prm-separator">group header name</div>
+    <div class="prm-row">
+      <div class="prm-subject"><a href="...">Subject</a></div>
+      <div class="prm-forum"><a href="...">Forum name</a></div>
+      <div class="prm-author"><a href="...">Author name</a></div>
+    </div>
+    <div class="prm-row">
+      <div class="prm-subject"><a href="...'>Subject</a></div>
+      <div class="prm-forum"><a href="...'>Forum name</a></div>
+      <div class="prm-author"><a href="...'>Author name</a></div>
+    </div>
+    <div class="prm-separator">group header name</div>
+    <div class="prm-row">
+      <div class="prm-subject"><a href="...'>Subject</a></div>
+      <div class="prm-forum"><a href="...'>Forum name</a></div>
+      <div class="prm-author"><a href="...'>Author name</a></div>
+    </div>
+    ... etc ...
+  <div>
+
+The <a href> within the prm-subject divs can have one or more classes
+assigned to it, based on the message / thread status. These are:
+
+  prm-new       This is an unread thread / message (this flag will only
+                be set if the user is logged into the Phorum site, since
+                otherwise the ajax code has no way to determine if the
+                thread / message is new or not)
+  prm-sticky    This is a sticky thread
+
+Note:
+
+  - The prm-separator divs are not available in the output when group_by = 0
+  - The prm-forum divs are not available when forum_id is not a vroot id
+

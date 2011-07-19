@@ -1,0 +1,18 @@
+One thing that had to be done to make it possible to easily override
+the settings, was commenting out the following line of code in the
+stock javascript code:
+
+    // thumbnailviewer.createthumbBox();
+
+Also, fixed viewing of large images. When centering, those went outside
+the left side of the screen, making them unreachable.
+
+    function centerDiv:
+
+    //Center div element horizontally
+    if (objwidth > docwidth) {
+        divobj.style.left=0;
+    } else {
+        divobj.style.left=docwidth/2-objwidth/2+"px";
+    }
+

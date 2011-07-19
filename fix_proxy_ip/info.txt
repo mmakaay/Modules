@@ -1,0 +1,8 @@
+title: Fix Proxy IP
+desc: This module can be used when your server is running behind a proxy server. In such case, Phorum will not see the IP-address of the client, but the one of the proxy. If the proxy is proper, it will send along a X-Forwarded-For header, telling the original IP-address. This module will let Phorum use the IP-address from that header if it is available in the request.
+version: 1.0.1
+category: admin
+author: Maurice Makaay <maurice@phorum.org>
+
+hook: parse_request|phorum_mod_fix_proxy_ip
+priority: run hook parse_request before *

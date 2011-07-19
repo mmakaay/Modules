@@ -1,0 +1,21 @@
+Module  : Make Profiles Private
+Version : 1.0.1
+Author  : James Lehmann a.k.a. Ravenswood
+Patches : Maurice Makaay
+
+This module prevents people from seeing profiles unless they are logged in.
+
+
+Installation instructions:
+--------------------------
+
+- Unpack the archive;
+
+- Move the directory "make_profiles_private" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Make Profiles Private".
+

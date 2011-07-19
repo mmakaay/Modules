@@ -1,0 +1,13 @@
+title: New Count
+desc: Shows the number of new messages in threads instead of just indicating that there are new messages. It also computes totals for all new messages and treads in the forum index and message lists.
+version: 1.13
+author: Maurice Makaay <maurice@phorum.org>
+category: viewlayout
+
+hook: lang|
+hook: list|phorum_mod_new_count_list
+hook: index|phorum_mod_new_count_index
+hook: after_header|phorum_mod_new_count_after_header
+
+priority: run hook list after *
+

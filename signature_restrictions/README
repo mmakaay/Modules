@@ -1,0 +1,52 @@
+Module  : Signature Restrictions
+Version : 1.0.2
+Author  : Maurice Makaay
+
+This module implements configurable features for enforcing signature
+restrictions. The module will check the signature when it is stored
+in the control center by the user and show an error to the user if
+the new signature does not meet the restrictions.
+
+Available restrictions are:
+
+ - The maximum number of characters;
+ - The maximum number of lines;
+ - The maximum number of characters for a single line;
+ - An option to disable the use of images;
+ - An option to disable any kind of markup, possibly until
+   the user has been signed up long enough.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "signature_restrictions" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Signature Restrictions".
+
+- Edit the settings for the module to setup the restrictions that
+  you want to use for your Phorum installation.
+
+
+Customization:
+--------------
+
+You can translate the error messages that this module produces by writing a
+language file "mods/signature_restrictions/lang/<yourlang>.php".
+In this filename <yourlang> has to be the same name as the main language
+file that you use (i.e. "include/lang/<yourlang>.php"). If you write a
+translation for this module, then please post it in the module's thread
+at phorum.org, so I can include it in the distribution.
+
+If you want to inform your users about signature restrictions before they
+submit the signature editing form, then you can edit the cc_usersettings.tpl
+template file to include the information. This file contains multiple
+control panels. The one that you have to edit, starts with the template code
+{IF PROFILE->SIGSETTINGS}
+

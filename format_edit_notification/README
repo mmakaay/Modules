@@ -1,0 +1,56 @@
+Module  : Format Edit Notification
+Version : 1.0.2
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module can be used to change the formatting of the message edit
+notification (e.g. use less space between the body and notification,
+use a smaller font, etc.)
+
+This can be done by defining an HTML prefix and postfix in the
+module's settings.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "format_edit_notification" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Format Edit Notification".
+
+- Go into the settings for the module and tweak the prefix and postfix
+  to your needs and taste.
+
+
+Example prefix/postfix combinations:
+------------------------------------
+
+- Put less space between the message body and the notification:
+
+  -> prefix   <br/><br/>
+  -> postfix  *** empty ***
+
+- Keep standard space, but use a smaller font:
+
+  -> prefix   <br/><br/><br/><small>
+  -> postfix  </small>
+
+- Put the notificaton in a <div> (CSS code can define the styling):
+
+  -> prefix   <div class="edit_notification">
+  -> postfix  </div>
+
+- Do some full styling in a <div> around the notification:
+
+  -> prefix   <div style="margin 10px 0px 10px 0px;
+                          padding: 5px;
+                          border: 2px solid black;
+                          background-color: red;
+                          color: white">
+  -> postfix  </div>
+

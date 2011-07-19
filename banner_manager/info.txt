@@ -1,0 +1,10 @@
+title: Banner Manager
+desc:  This module can be used to add (possibly externally hosted) banners to Phorum pages. The administrator can configure what banner code has to be displayed on what Phorum pages.
+author: Maurice Makaay <maurice@phorum.org>
+url: http://www.phorum.org/phorum5/read.php?62,123956
+version: 1.0.4
+category: viewlayout
+
+hook: common|phorum_mod_banner_manager_common
+hook: after_header|phorum_mod_banner_manager_after_header
+hook: before_footer|phorum_mod_banner_manager_before_footer

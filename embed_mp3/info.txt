@@ -1,0 +1,19 @@
+title: Embed MP3
+desc: This module implements an embedded MP3 player. MP3 files can be played directly from a URL using the [mp3]..[/mp3] BBcode tag. If the "Embed Attachments" module is installed and activated, it is possible to use the MP3 player for attachments as well.
+version: 1.0.4
+require_version: 5.2.7
+author: Maurice Makaay <maurice@phorum.org>
+url: http://www.phorum.org/phorum5/read.php?62,125585
+category: embed_content
+category: bbcode
+
+hook: lang|
+hook: parse_request|phorum_mod_embed_mp3_parse_request
+hook: format|phorum_mod_embed_mp3_format
+hook: format_fixup|phorum_mod_embed_mp3_format_fixup
+hook: render_embedded_attachment|phorum_mod_embed_mp3_render_embedded_attachment
+hook: editor_tool_plugin|phorum_mod_embed_mp3_editor_tool_plugin
+hook: javascript_register|phorum_mod_embed_mp3_javascript_register
+hook: common|phorum_mod_embed_mp3_common
+hook: css_register|phorum_mod_embed_mp3_css_register
+

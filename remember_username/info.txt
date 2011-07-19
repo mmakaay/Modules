@@ -1,0 +1,8 @@
+title: Remember Username
+desc: This module will store the Phorum username that was last used in a cookie. When entering the login screen, the username will be automatically filled in, based on this cookie.
+version: 1.1.0
+category: user_management
+category: user_features
+
+hook: after_login|mod_remember_username_after_login
+hook: start_output|mod_remember_username_start_output

@@ -1,0 +1,49 @@
+Module  : BBcode Video
+Version : 1.0.11
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module allows embedding of YouTube, Google, vimeo.com, break.com and
+ebaumsworld.com videos in forum messages by using the [video]...[/video]
+bbcode tags. Here is an example of how a video link would look in a message:
+
+ [video]http://www.youtube.com/v/abcDeFgHiJ1[/video]
+
+The module does recognize multiple types of video URLs automatically. So
+users do not have to (and will not, in my experience ;-) post the actual
+video resource URL as in the above example, but they can post URLs like
+these too:
+
+ [video]http://www.youtube.com/watch?v=qkFPbIEluEU&mode=related&search=[/video]
+
+ [video]http://video.google.com/videoplay?docid=1234567890123456789[/video]
+
+The module can be told to automatically replace all recognized video URLs with
+embedded videos. This is a special feature, which can be enabled through the
+module settings screen. If you enable this feature then plain video URLs and
+[url] surrounded video URLs will be replaced by embedded videos too.
+
+Examples:
+
+ http ://www.youtube.com/watch?v=qkFPbIEluEU&mode=related&search=
+
+ [url]http://www.youtube.com/v/abcDeFgHiJ1[/url]
+
+ http://video.google.com/videoplay?docid=1234567890123456789
+
+
+Installation instructions:
+--------------------------
+
+- Unpack the archive;
+
+- Move the directory "bbcode_video" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "BBcode Video".
+
+- Go to the settings page of the BBcode Video module to configure
+  the module.
+

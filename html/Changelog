@@ -1,0 +1,8 @@
+Changelog:
+----------
+
+2009-08-16 v2.0.0
+
+   - Implemented HTML Purifier (http://htmlpurifier.org) as the HTML
+     filter for the Phorum HTML module.
+

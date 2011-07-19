@@ -1,0 +1,19 @@
+title: Topic Poll
+desc: This module makes it possible to add polls to forum threads. For each forum you can configure who can create and who can answer polls.
+version: 1.0.20
+require_version: 5.1.23
+author: Maurice Makaay <maurice@phorum.org>
+url: http://www.phorum.org/phorum5/read.php?62,123477
+category: posting
+
+hook: lang|
+hook: posting_custom_action|phorum_mod_topic_poll_posting_custom_action
+hook: tpl_editor_buttons|phorum_mod_topic_poll_tpl_editor_buttons
+hook: tpl_editor_before_textarea|phorum_mod_topic_poll_tpl_editor_before_textarea
+hook: check_post|phorum_mod_topic_poll_check_post
+hook: format|phorum_mod_topic_poll_format
+hook: format_fixup|phorum_mod_topic_poll_format_fixup
+hook: read|phorum_mod_topic_poll_read
+
+priority: run hook format before *
+

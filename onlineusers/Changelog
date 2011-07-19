@@ -1,0 +1,113 @@
+Changelog:
+----------
+
+2011-01-09 v2.5.2 - Maurice Makaay
+
+    - Added Swedish translation. Thanks to phorum.org user sebdah.
+
+    - Added new German language files. Thanks to Oliver Riesen!
+
+2009-04-01 v2.5.1 - Thomas Seifert
+
+    - fixed delete statement for guest tracking
+
+2009-03-28 v2.5.0 - Thomas Seifert
+
+    - Added database table / support for storing the entries and avoiding overrun
+      settings field
+      
+2008-07-21 v2.4.5 - Maurice Makaay
+
+    - Added an option to configure whether the online users block
+      should be shown in the header or the footer of the page.
+
+2008-07-11 v2.4.4 - Maurice Makaay
+
+    - Small fix for XHTML validity of the "Display number of forum
+      readers" feature.
+
+2008-01-28 v2.4.3 - Maurice Makaay
+
+    - Fixed some more undefined index warnings that occurred after
+      installing the module on a clean system.
+
+    - Added a permission option to the settings which can be used to
+      control displaying of the online user list. Choices are:
+      all visitors, registered users and admin users.
+
+2008-01-23 v2.4.2 - Maurice Makaay
+
+    - Fix for working around some (harmless) undefined index warnings.
+
+    - Moved deprecated {LANG->on} string to {LANG->mod_onlineusers->on}.
+
+2007-12-30 v2.4.1 - Maurice Makaay
+
+    - Adding reader counts to folders on the index page is now prevented.
+
+    - Added a new setting, as requested by Berti: "Indicate administrators
+      in the online user list".
+
+    - Added updated language files for German forums. Thanks to Berti!
+
+    - Added a Turkish translation. Thanks to Osman Þener!
+
+    - Added a French translation. Thanks to notre-planete.info.
+
+2007-12-28 v2.4.0 - Maurice Makaay
+
+    - Full rewrite release to make full use of new Phorum features.
+
+    - Added module template support to pull the markup code from
+      the module code.
+
+    - Records are only shown when available, so the module won't show
+      "<empty> on Januari 1, 1970" after installation anymore.
+
+    - Admin users are now indicated by (admin) after their name.
+      The "Online Users (Administrator)" header was to unclear to users.
+
+    - Added support for styling through CSS.
+
+    - For guests counts, Google, Yahoo and unknown clients are not counted
+      anymore. In the future, we might add extra clients, but these are the
+      most apparent ones to push up the guest count.
+
+    - The idle time for a user is now shown in "m:ss" format.
+
+    - The settings page is compressed by putting option help in help
+      balloons.
+
+    - If the Phorum user tracking is disabled or higher than the configured
+      idle time for this module, the settings screen will show a clear
+      error message and a description of what to do about the problem.
+
+    - Cleaned up some code that could be replaced with new 5.2 API code.
+
+    - Added support for 5.2 display names (where the admin can choose whether
+      the username or the real_name for the user has to be used as the
+      display name).
+
+    - Added support for also keeping track of the number of guest readers
+      in a forum.
+
+    - Improved the code for counting forum readers by not setting the
+      count for each forum to zero before counting the readers. We can
+      simply asume zero readers if the forum_id is not available in the
+      reader list. This will also prevent possible undefined index
+      errors in case new forums are added.
+
+    - Users for which "hide_activity" is configured are added to the
+      guest count. They will still count as a user for determining the
+      record number of users.
+
+    - Added some default settings for the module.
+
+2007-12-14 v2.3.1 - Sunbringer
+
+    - Modified version to work with 5.2.
+
+2004-03-23 v1.0.0 - Chris Eaton
+
+    - Initial Phorum 5.0 release.
+

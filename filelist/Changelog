@@ -1,0 +1,80 @@
+Changelog:
+----------
+
+2008-02-28 v1.1.4
+
+    - Added a configuration option to make it possible to display the
+      file list automatically after the header and/or before the footer.
+
+2007-12-14 v1.1.3
+
+    - Fixed undefined index notice for the settings page, which happened
+      on first access of the page and after adding forums.
+      Thanks to Steve Healy for the report.
+
+    - Implemented support for the new attachment "force download" option.
+
+    - Added French translation. Thanks to notre-planete.info.
+
+2007-10-16 v1.1.2
+
+    - Fixed a problem that caused the filelist to not display
+      for threaded and hybrid read views. Thanks to Thomas Seifert
+      for pinpointing the problem and for providing a fix.
+
+2007-08-06 v1.1.1
+
+    - Use new file API call phorum_api_file_check_read_access() instead of
+      phorum_db_file_get().
+
+2007-08-05 v1.1.0
+
+    - Fully converted to Phorum 5.2.
+    - Using real module templates now for the filelist HTML code.
+    - Drastic template variable renaming to follow the Phorum 5.2 naming.
+    - More docs for template writers in the README.
+
+2007-06-14 v1.0.7
+
+    - Added compatibility for the 5.2 pathinfo changes for the file
+      download URL. The pathinfo changes are used to force browsers into
+      using the right filename for downloading if a user right
+      clicks the URL and chooses "Save link as ...".
+
+2007-01-30 v1.0.6
+
+    - Branched version for Phorum 5.2.
+    - v1.0.5 change was rolled back, because display names are handled
+      differently in 5.2.
+
+2006-08-23 v1.0.4
+
+    - Display the time at which a file was uploaded instead of the
+      posting time of the message in which the file is. This will
+      be more clear for those cases where the attachments in a message
+      are updated with new versions.
+
+2006-08-14 v1.0.3
+
+    - Corrected displaying of unregistered users in the file list.
+      There should be no profile link for those. Thanks to
+      Clemens Weiﬂ for the bug report and the fix.
+
+2006-07-25 v1.0.2
+
+    - The language string PMReadMessage is no longer a default Phorum
+      language string. Therefore, I added a similar string to the
+      module language files.
+
+2006-05-05 v1.0.1
+
+    - Fixes in the default template: the <th> tags should use align="right"
+      and removed stale </h3> closing tag (credits to Brian).
+
+    - Fixed displaying with of the block. In MSIE the block showed up
+      wider than the other blocks (reported by CBiLL).
+
+2006-05-04 v1.0.0
+
+    - Initial release
+

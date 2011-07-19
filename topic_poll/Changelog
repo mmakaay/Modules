@@ -1,0 +1,157 @@
+Changelog:
+----------
+
+2011-01-09 v1.0.20
+
+    - Added new German language files. Thanks to Oliver Riesen!
+
+		- Added Russian translation. Thanks to phorum.org user sailord.
+
+		- Added Swedish translation. Thanks to phorum.org user CHR.
+
+2010-10-27 v1.0.19
+
+    - A small change to explicitly set the POST action URL for
+      Topic Poll forms.
+
+    - Updated the install.php to setup the required custom profile field
+		  using the custom fields API code instead of directly hacking the
+			custom fields data array.
+
+2010-05-19 v1.0.18
+
+    - Fixed an issue with the voting form being visible after the first
+		  anonymous vote when the IP-block is fully disabled. BTW: posting the
+			poll for the second time would not register the vote. The only problem
+			was that the results were not visible directly after the first post.
+			Thanks to Zdravko Balorda for the bug report!
+
+2010-04-18 v1.0.17
+
+    - Renamed constants to avoid redefining the same contstants when
+		  the "rate_this_thread" module is enabled as well. That module
+			was based on the Topic Poll module and copied the CAST_* constants.
+
+2009-11-08 v1.0.16
+
+    - Fixed displaying of the poll style preview in the admin interface.
+
+2009-10-25 v1.0.15
+
+    - Fixed an issue with execution priorities, that could cause
+      other formatting modules to fail.
+
+2009-08-01 v1.0.14
+
+    - Fixed a small bug with using BBcode in the poll question and/or
+      answers. When editing a poll, the BBcode would show up as the
+      rendered HTML for that BBcode in the edit form. After saving,
+      the poll would show the HTML escaped in the page, instead of
+      showing the desired formatting.
+
+2009-07-04 v1.0.13
+
+    - Moved the separator between poll and message body to a module
+      template, so it can be modified without hacking the code.
+
+    - Fixed an issue where other formatting modules (especially the
+      smileys module) could break the form code of the Poll module.
+      Thanks to Phorum user paranid for reporting the problem.
+
+    - Removed templates/default, because that one was only there for
+      supporting some of the very early 5.2 development versions.
+
+2009-06-05 v1.0.12
+
+    - Made the module compatible with the CSRF protection in Phorum 5.2.11.
+
+    - Added German translation files.
+      Thanks to Oliver Riesen.
+
+2008-07-14 v1.0.11
+
+    - Added a new option to the settings for a poll, to make it possible to
+      hide all thread reply messages until the visitor casts a vote.
+
+2008-01-01 v1.0.10
+
+    - It is now possible to not add an icon to the subjects in the list
+      page for threads that have a poll in them, but instead setup some
+      template variables. This way, it's possibly to fully control the
+      way in which polls are indicated in the message list page. See the help
+      information in the module admin settings for info about this feature.
+
+    - Added a Latin American Spanish translation.
+      Thanks to Phorum user "marcelarr".
+
+    - Added a Ukrainian translation.
+      Thanks to Phorum user "tadjik".
+
+2007-11-19 v1.0.9
+
+    - Reset the $messages array in the read hook, so each() will get the
+      first message in the array. This didn't work correctly if some
+      previous read hook from another module iterated over the $messages
+      array as well.
+
+2007-08-17 v1.0.8
+
+    - Copied templates/default to templates/emerald to match the default
+      fall back template for Phorum 5.2.
+
+2007-07-13 v1.0.7
+
+    - Fixed a compatibility issue for using this module in combination
+      with Phorum version 5.1.23. From here on, 5.1.23 is also the minimal
+      version for which the module will work.
+
+2007-06-19 v1.0.6
+
+    - Fixed a bug in the feed message rendering.
+
+    - Added an option in the poll editor for displaying the poll before
+      or after the message body.
+
+    - Included updated French language file by Fran.
+
+2007-05-01 v1.0.5
+
+    - Fixed a typo in the Dutch language file.
+
+2007-04-06 v1.0.4
+
+    - If a topic is closed, then the poll is closed too now.
+
+2007-02-22 v1.0.3
+
+    - Fix for finding the raw_datestamp on 5.1 systems, in case the
+      messages in the format message array are from multiple forums.
+
+2007-01-19 v1.0.2
+
+    - Added German translation (thanks Netwalker!).
+
+    - Added French translation (thanks Fran!).
+
+    - Changed the maximum width for the score bars to 95% instead of 100%,
+      to provide some extra space for styling the bars.
+
+    - Fixed a bug which could cause failure to draw the graph after
+      editing the poll form (showing only some undefined index
+      warnings instead).
+
+    - Added a simple rendering to the format hook for displaying polls
+      inside RSS/ATOM feeds. In the feed, the poll will show up as the
+      poll question.
+
+2006-09-07 v1.0.1
+
+    - The preview of the poll in the admin interface (for selecting a
+      style) resulted into a nested form (voting form within the admin
+      form). A change was made, so the poll now doesn't start a
+      new form if it's in the admin interface.
+
+2006-09-06 v1.0.0
+
+    - Initial revision
+

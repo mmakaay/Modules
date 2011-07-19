@@ -1,0 +1,22 @@
+title: Readable Dates
+desc: Make dates easier to read for humans, by using relative indications like "two hours ago", "yesterday, 12:30", "today, 17:52", "two weeks ago", "last year", etc. All date indications can be customized through the language files.
+version: 1.1.11
+require_version: 5.2.0
+author: Maurice Makaay
+url: http://www.phorum.org/phorum5/read.php?62,128691
+category: viewlayout
+
+hook:  lang|
+hook:  list|phorum_mod_readable_dates_list
+hook:  index|phorum_mod_readable_dates_index
+hook:  read|phorum_mod_readable_dates_read
+hook:  profile|phorum_mod_readable_dates_profile
+hook:  format|phorum_mod_readable_dates_format
+hook:  buddy_list|phorum_mod_readable_dates_buddy_list
+hook:  pm_list|phorum_mod_readable_dates_pm_list
+hook:  pm_read|phorum_mod_readable_dates_pm_read
+
+# A special hook that can be used by other code to let this module
+# format a date.
+hook: format_readable_date|phorum_mod_readable_dates_format_date
+

@@ -1,0 +1,6 @@
+title: Guitar TAB
+desc: This module will try to autodetect ASCII art based guitar TABs in forum messages and automatically applies the bbcode tag [code] to them (unless they are already within a [code] block).
+version: 1.0.1
+category: bbcode
+
+hook: posting_custom_action|phorum_mod_guitartab_posting_custom_action

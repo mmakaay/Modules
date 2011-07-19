@@ -1,0 +1,24 @@
+Module  : Hide Edit Notification  
+Version : 1.1.0
+Author  : Maurice Makaay
+
+This module will hide the "Edited [x] times..." notification message that
+is put below a message after editing it. You can configure for which types
+of users to do this (admins, moderators and/or users).
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "hide_edit_notification" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Hide Edit Notification". 
+
+- Go the the module's settings screen to configure for what users
+  the edit message should be hidden.
+

@@ -1,0 +1,9 @@
+title: Customize Mail Messages
+desc: This module can be used to customize the mail messages that are sent out by Phorum. You can also do this by editing the language files, but using this module, you won't have to be afraid of overwriting the modified language file on upgrades.
+version: 1.0.0
+author: Maurice Makaay
+category: admin
+category: email
+
+hook: email_user_start|phorum_mod_customize_mail_messages_email_user_start
+

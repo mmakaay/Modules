@@ -1,0 +1,71 @@
+Module  : Attachment Uploader
+Version : 1.0.2
+Authors : Maurice Makaay
+
+This module improves the attachment uploading process. It implements
+attaching and detaching files for a message, without having to refresh
+the page. For buzzword compliancy, you could think of it as an
+"Ajax Uploader", although Ajax technology cannot be used for uploading
+files.
+
+Features:
+
+- Attach files to messages without page reloading;
+- Detach files from messages without page reloading;
+- Show an error if the user hits "Attach" without selecting a file;
+- If errors occur during uploading, a popup will show the error;
+- Cross browser JavaScript (tested in MSIE6, FireFox, Opera and Konqueror).
+
+
+Installation:
+-------------
+
+- Unpack the archive;
+
+- Move the directory "attachment_uploader" to the directory "mods"
+  within your Phorum installation;
+
+- Edit your template (see instructions below);
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Attachment Uploader";
+
+
+Template customization:
+-----------------------
+
+To make the attachment uploader module work, you will have to update
+your template. Only a small change is needed if your template is based
+on the Emerald template.
+
+Open the template file "posting.tpl". Find the start of the attachments
+code in that file (starting around line 166 with {IF ATTACHMENTS}). Add
+the boxed text from below to this spot in the template
+
+      ......
+      ......
+      _________________________________________________________
+     |                                                         |
+     | <div id="attachments-container">                        |
+     |_________________________________________________________|
+
+           {IF ATTACHMENTS}
+      ......
+      ......
+
+Then go to line 213, where you have to add this boxed code:
+
+      ......
+      ......
+          {/IF}
+      _________________________________________________________
+     |                                                         |
+     | </div> <!-- end of attachments-container -->            |
+     |_________________________________________________________|
+
+       {HOOK "tpl_editor_before_textarea"}
+      ......
+      ......
+

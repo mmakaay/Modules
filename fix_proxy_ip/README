@@ -1,0 +1,24 @@
+Module  : Fix Proxy IP
+Version : 1.0.1
+Author  : Maurice Makaay
+
+This module can be used when your server is running behind a proxy server.
+In such case, Phorum will not see the IP-address of the client, but the one
+of the proxy. If the proxy is proper, it will send along a X-Forwarded-For
+header, telling the original IP-address. This module will let Phorum use the
+IP-address from that header if it is available in the request.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "fix_proxy_ip" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Fix Proxy IP".
+

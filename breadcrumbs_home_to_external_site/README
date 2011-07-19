@@ -1,0 +1,31 @@
+Module  : Breadcrumbs 'Home' to External Site 
+Version : 1.0.0
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module can be used to modify the breadcrumbs of Phorum in such way
+that the original 'Home' breadcrumb is renamed to 'Forums' and that
+a new 'Home' link is prepended. The new 'Home' link can be configured
+to point to an arbitrary URL.
+
+This is useful for sites that run forums on a deeper level or even another
+URL. The new 'Home' breadcrumb can then be used to point back to the
+main site.
+
+
+Installation instructions:
+--------------------------
+
+- Unpack the archive;
+
+- Move the directory "breadcrumbs_home_to_external_site" to the
+  directory "mods" within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Breadcrumbs 'Home' to External Site".
+
+- On the module's settings page, you can configure the URL to use for
+  the 'Home' breadcrumb. By default, the breadcrumb will point to the
+  root of your website.
+

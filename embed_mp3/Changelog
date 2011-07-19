@@ -1,0 +1,35 @@
+Changelog:
+----------
+
+2008-07-06 v1.0.4
+
+    - Implemented proper encoding of the MP3 URLs in the FlashVars value.
+      These need to be URLencoded instead of htmlspecialchars-ed.
+
+    - Added a work-around for the problem that the player will cut the
+      MP3 URL at the first comma (some kind of playlist support maybe?).
+      The "parse_request" hook was used to decode a specially crafted
+      file download URL. This hook requires Phorum version 5.2.7.
+
+    - Implemented the feature "Show all MP3 attachments using the embedded
+      MP3 player".
+
+2008-01-18 v1.0.3
+
+    - Added an editor tool button, using an icon that was provided by M@AATW.
+
+2008-01-03 v1.0.2
+
+    - Some fixes to the template to make it fully XHTML compliant.
+
+2007-12-08 v1.0.1
+
+    - Deleted float:left for the player. That solves some problems
+      when the player is the last item in the message body (it would show
+      outside the body div) and I think it is okay when the MP3 player is
+      shown on its own line in the body.
+
+2007-11-25 v1.0.0
+
+    - Initial release.
+

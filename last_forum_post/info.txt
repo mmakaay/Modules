@@ -1,0 +1,12 @@
+title: Last Forum Post
+desc: This module keeps track of the last post that has been done in each forum (similar to the last post functionality that is already available for each thread).
+author: Maurice Makaay
+version: 1.2.0
+category: viewlayout
+
+hook: after_post|phorum_mod_last_forum_post_after_post
+hook: delete|phorum_mod_last_forum_post_delete
+hook: move_thread|phorum_mod_last_forum_post_move_thread
+hook: index|phorum_mod_last_forum_post_index
+hook: after_approve|phorum_mod_last_forum_post_after_approve
+hook: hide|phorum_mod_last_forum_post_hide

@@ -1,0 +1,14 @@
+title: Jumpmenu
+desc:  This module adds a javascript menu to the Phorum pages, which can be used to quickly select a forum to jump to. Forum folders will be shown as submenus.
+url: http://www.phorum.org/phorum5/read.php?62,125516
+author: Maurice Makaay
+version: 1.2.0
+require_version: 5.2.16
+category: viewlayout
+
+hook: lang|
+hook: common|phorum_mod_jumpmenu_common
+hook: before_footer|phorum_mod_jumpmenu_before_footer
+hook: css_register|phorum_mod_jumpmenu_css_register
+hook: javascript_register|phorum_mod_jumpmenu_javascript_register
+

@@ -1,0 +1,14 @@
+title: Search Spelling
+desc: This module queries Google's search engine for each search request to implement a "Did you mean ...?" function for the Phorum search pages. This will suggest alternative spellings for words that are possibly misspelled in the search query.
+version: 1.0.2
+url: http://www.phorum.org/phorum5/read.php?62,124900
+author: Maurice Makaay
+require_version: 5.2.0
+category: search
+
+hook: search_action|phorum_mod_search_spelling_search_action
+hook: after_header|phorum_mod_search_spelling_after_header
+hook: lang|
+
+priority: run hook after_header before *
+

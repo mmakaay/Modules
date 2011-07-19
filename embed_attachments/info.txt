@@ -1,0 +1,16 @@
+title: Embed Attachments
+desc: This module makes it possible to put links that point to the attachments for a message inline at any position in the message body. Other modules (like "Embed Images" and "Embed MP3") can be installed to replace these links by embedded attachment viewers.
+author: Maurice Makaay <maurice@phorum.org>
+url: http://www.phorum-support.de/
+version: 1.0.1
+require_version: 5.2.2
+category: embed_content
+
+hook: lang|
+hook: javascript_register|phorum_mod_embed_attachments_javascript_register
+hook: after_attach|phorum_mod_embed_attachments_after_attach
+hook: after_detach|phorum_mod_embed_attachments_after_detach
+hook: tpl_editor_attachment_buttons|phorum_mod_embed_attachments_attachmentbuttons
+hook: format|phorum_mod_embed_attachments_format
+hook: format_fixup|phorum_mod_embed_attachments_format_fixup
+

@@ -1,0 +1,23 @@
+Changelog:
+----------
+
+2011-04-01 v1.0.2
+
+   - Made the module work for cases where the attachment form is placed
+     below the textarea in the editor.
+
+2008-02-22 v1.0.1
+
+   - Fixed some problems for the case where the maximum number of
+     attachments was reached.
+
+   - Added an activity indicator image when uploading a file.
+
+   - Restricted copying back of form data to the main form to only copy
+     the fields that are important for the attachments management. This
+     allows for further editing of the message (e.g. subject and body)
+     while the attachment upload is taking place.
+
+2008-02-22 v1.0.0
+
+   - Initial release.

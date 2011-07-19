@@ -1,0 +1,61 @@
+Module  : Format Signatures
+Version : 1.0.1
+Author  : Maurice Makaay <maurice@phorum.org>
+
+This module can be used to add formatting to signatures (e.g. showing
+signatures in a different color or adding a separator line between the
+body and the signature).
+
+This can be done by defining an HTML prefix and postfix in the
+module's settings.
+
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "format_signatures" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Format Signatures".
+
+- Go into the settings for the module and tweak the prefix and postfix
+  to your needs and taste.
+
+
+Example prefix/postfix combinations:
+------------------------------------
+
+- Put some white space and a separator line between the body and signature:
+
+  -> prefix   <br/><hr/>
+  -> postfix  *** empty ***
+
+- Use a smaller font:
+
+  -> prefix   <small>
+  -> postfix  </small>
+
+- Use a different font color:
+
+  -> prefix   <div style="color:#555">
+  -> postfix  </div>
+
+- Put the signature in a <div> (CSS code can define the styling):
+
+  -> prefix   <div class="signature">
+  -> postfix  </div>
+
+- Do some full styling in a <div> around the signature:
+
+  -> prefix   <div style="margin 10px 0px 10px 0px;
+                          padding: 5px;
+                          border: 2px solid black;
+                          background-color: red;
+                          color: white">
+  -> postfix  </div>
+

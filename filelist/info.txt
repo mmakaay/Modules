@@ -1,0 +1,16 @@
+title: File List
+desc: Adds a file list for a thread, which lists all attachments that are available in the full thread.
+version: 1.1.4
+require_version: 5.2.2
+author: Maurice Makaay <maurice@phorum.org>
+category: viewlayout
+
+hook: lang|
+hook: read|phorum_mod_filelist_read
+hook: tpl_filelist|phorum_mod_filelist_tpl_filelist
+hook: after_header|phorum_mod_filelist_after_header
+hook: before_footer|phorum_mod_filelist_before_footer
+
+priority: run hook after_header after *
+priority: run hook before_footer before *
+
