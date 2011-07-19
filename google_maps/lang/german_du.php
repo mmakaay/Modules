@@ -1,0 +1,42 @@
+<?php
+
+# Beware: a lot of the strings in this language file are used within
+# JavaScript code. Therefore, better refrain from using single
+# and double quotes in the strings to prevent javascript errors,
+# unless you can write JavaScript code and understand exactly what
+# you're doing.
+
+$PHORUM["DATA"]["LANG"]["mod_google_maps"] = array
+(
+    "YourLocation"        => 'Dein Standort:',
+    "CCIntroduction"      => 'Du kannst in der Karte unten Deinen Standort ' .
+                             'ausw&auml;hlen an dem Du wohnst. Die ' .
+                             'Markierung kannst Du mit einem Doppelklick ' .
+                             'platzieren und mit der Maus verschieben. ' .
+                             'Alternativ kannst Du die Suche benutzen. ' .
+                             'Siehe Hilfe.<br />' .
+                             'Beispiel: "Platz der Republik 1, ' .
+                             '11011 Berlin, Germany"',
+    "Search"              => 'Standort suchen',
+    "Help"                => 'Hilfe',
+    "HelpText"            => 'Das allgemeine Suchformat lautet: ' .
+                             'Anschrift oder PLZ, Ort und Land. Auf jeden Fall ' .
+                             'Am Ende der Suchanfrage das Land angeben. ' .
+                             'Beispielsuchen:\r\n' .
+                             'Berlin, Deutschland\r\n' .
+                             'Platz der Republik 1, 11011 Berlin, Germany\r\n' .
+                             'Brandenburger Tor, Berlin, Deutschland\r\n',
+    "Clear"               => 'Position l&ouml;schen',
+    "Location"            => 'Standort: ',
+    "NoLocationSet"       => 'Kein Standort ausgew&auml;hlt',
+    "IncompatibleBrowser" => 'Sorry, Dein Browser ist inkompatibel ' .
+                             'die ben&ouml;tigten Funktionen fehlen f&uuml;r ' .
+                             'Google Maps.', 
+    "NoSearchResults"     => 'Sorry, es wurden keine Ergebnisse f&uuml;r Deine ' .
+                             'Suchanfrage gefunden. ',
+    "ProfileTitle"        => 'Standort dieses Benutzers:',
+
+    // usermap addon
+    "UserMapTitle"        => 'Standorte unserer Benutzer:',
+);
+?>

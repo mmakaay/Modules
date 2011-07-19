@@ -1,0 +1,34 @@
+Module  : Hide Signatures
+Version : 1.0.1
+Author  : Maurice Makaay
+
+This mod adds a configuration option for users that can be used
+to disable viewing of user signatures. The option can be found in
+the user's control center under the forum settings option.
+
+For running this mod, you need Phorum 5.1.7-RC1 or later, because
+of the features that are used. You could try to run the mod on an
+earlier 5.1.x release, but then you will have to add the following
+code to the cc_usersettings.tpl template manually, just before the
+ending </table> of the settings table:
+
+  {HOOK tpl_cc_usersettings PROFILE}
+
+
+Install:
+--------
+
+- Install this file in the directory "mods" within your 
+  Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Hide Signatures".
+
+- At the first time that this module is run (by visiting the forums),
+  the module will automatically create a custom profile field for 
+  storing the user setting for this module. You should be able to
+  see the mod_hide_signatures field in the admin interface under 
+  "Custom Profile".
+

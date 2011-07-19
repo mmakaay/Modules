@@ -1,0 +1,37 @@
+Changelog:
+----------
+
+2006-08-20 v1.0.3
+
+    - Changed the common hook a bit to detect an empty body correctly
+      in case $_POST data is sent unchanged to the server. In this case
+      empty_body=1 and body=n/t is sent. Before the change, the "n/t" in the
+      body would cause the script to set empty_body to 0 and use "n/t" as
+      the new body.
+
+2007-01-21 v1.0.2
+
+    - The editmessage (Edit [x] times. Last edit at [y] by [z]) and
+      possible additions to the body (e.g. by other modules) are now
+      kept intact.
+
+    - The BBcode module adds a space to the start of the body, which
+      confused the Empty Bodies module a bit. The module is now
+      compatible with this.
+
+2006-01-17 v1.0.1
+
+    - The module now makes use of Phorum 5.1 hooks for good integration
+      with the posting editor..
+
+    - Added feature to print subject suffix (n/t) and body string 
+      for empty messages. The strings to use are configured using
+      the localization files.
+
+    - If a user enters "n/t" in the body himself, the message now counts
+      as not being empty.
+
+2006-01-11 v1.0.0
+
+    - Initial release.
+

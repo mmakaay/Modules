@@ -1,0 +1,8 @@
+hook: lang|
+hook: common|phorum_mod_hide_signatures_common
+hook: tpl_cc_usersettings|phorum_mod_hide_signatures_tpl_cc_usersettings
+hook: cc_save_user|phorum_mod_hide_signatures_cc_save_user
+hook: read_user_info|phorum_mod_hide_signatures_read_user_info
+title: Hide Signatures
+desc: This mod adds a configuration option for users that can be used to disable viewing of user signatures. The option can be found in the user's control center under the forum settings option.
+version: 1.0.1

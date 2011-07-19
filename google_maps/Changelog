@@ -1,0 +1,98 @@
+Changelog:
+----------
+
+2007-03-31 v1.0.6
+
+    - The mapframe.php script always loaded the english language due
+      to a bug. Thanks to regdos for finding the bug.
+
+2007-03-29 v1.0.5
+
+    - The previous bugfix introduced a different bug: saving profile data
+      on any panel which does not contain the Google map clears the
+      user's position. Thanks to cbob for finding the bug.
+
+    - Fixed a newline representation bug in the alert message in case
+      a location is not found based on a search string. This showed
+      "\n" before. While I was at it, I changed the "\n" in the
+      language code to "\r\n", which makes it more compatible with
+      MSIE.
+
+    - Added language support (polish.php and polish_utf8.php).
+      Thanks to regdos.
+
+    - No user location map is shown in the profile anymore if no
+      location was set by the user.
+
+2007-03-13 v1.0.4
+
+    - Fixed two bugs reported by regdos. These were the results of
+      some major refactoring of the map tool, to make it easier to
+      use from other pages than the module pages alone. Fixed are:
+      - the not working location search;
+      - the inability to unset the previoiusly selected location
+        to fully clear the location in the control center of the user.
+
+    - Included CMU versioning info. For more info see:
+      http://www2.phorum.org/phorum5/read.php?16,120856
+
+2007-02-26 v1.0.3
+
+    - If a user saved some profile data on another control center page
+      than the page on which the Google map was, then the location
+      info would get lost. This bug is now fixed.
+      Thanks to Bert Körn for reporting this problem.
+
+    - Added language support (german_du.php).
+      Also thanks to Bert Körn for this one.
+
+    - Changed Stammgast -> Benutzer in the German language file and
+      created a german_sie.php based on german_du.php.
+      Please let me know if my German sucks ;-)
+
+2007-01-29 v1.0.2
+
+    - The iframe in the map viewer had a wrong id. Changed id "maptool"
+      to "maptool_iframe". This had no repercussions on the active
+      functionality of the module.
+
+    - Implemented a user map, which plots all known user locations
+      on a map. The URL to the addon is put in the template variable
+      {URL->MOD_GOOGLE_MAPS_USERMAP}, so you can use that to add a
+      link on your page to the user map.
+
+    - Added support for displaying real names on the user map instead
+      of usernames. For this to work, you should also have installed
+	  version 2.1.0 of the Real Name module.
+
+2007-01-29 v1.0.1
+
+    - Big code cleanup and a lot of changes for making the map tool easy
+	  to use from other Phorum modules, so they can implement geotagging
+	  anything in Phorum.
+
+    - Changed the way in which the user interacts with the map. No marker
+	  is shown, unless the user clicks on the map to place the marker.
+	  After that, the marker can be moved by either clicking on a different
+	  location or by dragging and dropping the marker.
+
+    - Since the map in the admin interface is only used for setting the
+	  start view for the map that the user gets when selecting a location,
+	  there was no use in showing a marker there. So I completely removed
+	  the marker from that interface.
+
+    - All data is now saved when submitting a map. So map center, marker
+	  position, map type and zoom level are stored. Using this, the user
+	  can exactly configure how the map will be shown in the profile.
+
+    - Made the module work correctly inside portable and embedded
+	  environments.
+
+    - Make use of the javascript constants G_...._MAP for handling
+	  the map types, so we won't run into problems with localized
+	  versions of the Google Map system.
+
+2007-01-24 v1.0.0
+
+    - Initial release
+

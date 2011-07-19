@@ -1,0 +1,7 @@
+title: BBcode Google
+desc:  This module will turn [google]search words[/google] into a link that will search for the search words on Google.
+version: 1.0.7
+
+hook:  format|phorum_mod_bbcode_google_format
+hook:  common|phorum_mod_bbcode_google_common
+hook: editor_tool_plugin|phorum_mod_bbcode_google_editor_tool_plugin

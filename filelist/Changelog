@@ -1,0 +1,39 @@
+Changelog:
+----------
+
+2007-01-30 v1.0.5
+
+    - Added support for displaying real names instead of usernames
+	  through a new feature in the Real Names module, version 2.1.0. 
+
+2006-08-23 v1.0.4
+
+    - Display the time at which a file was uploaded instead of the
+      posting time of the message in which the file is. This will
+      be more clear for those cases where the attachments in a message
+      are updated with new versions. 
+
+2006-08-14 v1.0.3
+
+    - Corrected displaying of unregistered users in the file list.
+      There should be no profile link for those. Thanks to
+      Clemens Weiﬂ for the bug report and the fix.
+
+2006-07-25 v1.0.2
+
+    - The language string PMReadMessage is no longer a default Phorum
+      language string. Therefore, I added a similar string to the 
+      module language files.
+
+2006-05-05 v1.0.1
+
+    - Fixes in the default template: the <th> tags should use align="right"
+      and removed stale </h3> closing tag (credits to Brian).
+
+    - Fixed displaying with of the block. In MSIE the block showed up
+      wider than the other blocks (reported by CBiLL).
+
+2006-05-04 v1.0.0
+
+    - Initial release
+

@@ -1,5 +1,5 @@
 Module  : Remember Username
-Version : 1.1.0
+Version : 1.0.0
 Author  : Maurice Makaay
 
 This module will store the Phorum username that was last used in

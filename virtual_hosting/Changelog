@@ -1,0 +1,14 @@
+Changelog:
+----------
+
+2007-07-11 v1.0.1
+
+    - Fixed a bug: when deleting a vroot which still had hostnames linked
+      to it, the hostnames would not get unlinked. This resulted in some
+      stale hostnames which could not be deleted through the interface
+      (thanks to David Scott for reporting the bug).
+
+2007-03-08 v1.0.0
+
+    - Initial release
+

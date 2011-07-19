@@ -1,0 +1,9 @@
+# Additional rewrite rules for the real_name v.2 module.
+
+page read
+  array [MOD_FILELIST]
+      rewrite author with displayname(user_id)
+      rewrite link_author with profile_url(user_id)
+  end array
+end page
+

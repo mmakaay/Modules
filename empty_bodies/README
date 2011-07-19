@@ -1,0 +1,22 @@
+Module  : Empty Bodies
+Version : 1.0.3
+Author  : Maurice Makaay (based on a first implementation by Thomas Seifert)
+
+Allow empty bodies in messages, so forum users can commit quick comments by
+only using the subject line. The module will also add a string to the
+subject and body to identify empty messages. These strings can be customized
+through the language files.
+
+Install:
+--------
+
+- Unpack the archive;
+
+- Move the directory "empty_bodies" to the directory "mods"
+  within your Phorum installation;
+
+- Login as administrator in Phorum's administrative interface and
+  go to the "Modules" section;
+
+- Enable the module "Empty Bodies".
+
