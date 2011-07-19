@@ -1,0 +1,12 @@
+
+!! Not all modules from this directory have been tested with Phorum 5.1 !!
+
+They might work, but they might as well not. When we migrated to GitHub,
+we did our best to update the module repository to provide the correct
+modules for the various branches (master, phorum_5_1, phorum_5_2), but
+since require_version was not supported way back, we have no tracking
+of Phorum version compatibility for older modules.
+
+If you find a module that is not compatible, please let us know, so we
+can update this historic repository.
+
