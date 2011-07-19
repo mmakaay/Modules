@@ -1,5 +1,0 @@
-<Files ~ "\.gif$">
-    Order allow,deny
-    Allow from all
-</Files>
-

@@ -1,5 +1,0 @@
-<Files ~ "\.(js|png)$">
-    Order allow,deny
-    Allow from all
-</Files>
-
