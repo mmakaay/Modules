@@ -189,7 +189,7 @@ function mod_google_maps_upgrade_userdata($d)
             $d['center'], $m
         )) {
             $d['map_latitude']  = $m[1];
-            $d['map_longitude'] = $m[1];
+            $d['map_longitude'] = $m[2];
             unset($d['center']);
         }
     }
@@ -200,7 +200,7 @@ function mod_google_maps_upgrade_userdata($d)
             $d['marker'], $m
         )) {
             $d['marker_latitude']  = $m[1];
-            $d['marker_longitude'] = $m[1];
+            $d['marker_longitude'] = $m[2];
             unset($d['marker']);
         }
     }

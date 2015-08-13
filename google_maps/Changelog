@@ -1,9 +1,16 @@
 Changelog:
 ----------
 
+2015-08-05 v2.0.7 (Oliver Riesen)
+
+    - Fixed conversion of module v1 user settings data to v2 user settings
+      data. Longitude was replaced by Latitude during conversion.
+
+    - Added conversion script for module v1 user settings data.
+
 2015-08-05 v2.0.6 (Oliver Riesen)
 
-    - Correct handling of http/https in javascript links to Google.
+    - Fixed handling of http/https in javascript links to Google.
 
     - Escaping ampersand in URL.
 
