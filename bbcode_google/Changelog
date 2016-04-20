@@ -1,6 +1,22 @@
 Changelog:
 ----------
 
+2016-04-20 v1.1.2 Oliver Riesen-Mallmann (oliver@riesen.org)
+
+   - Obsolete assignment by reference (&new) removed; see:
+     http://www.phorum.org/phorum5/read.php?61,156894,157057#msg-157057;
+     thanks to Fabian Bastin
+     (http://www.phorum.org/phorum5/profile.php?61,3024).
+
+2015-09-18 v1.1.1 Oliver Riesen <oliver@riesen.org>
+
+   - Google icon updated, see:
+     http://googleblog.blogspot.de/2015/09/google-update.html
+
+   - URL in info.txt added.
+
+   - Performance improvements.
+
 2007-11-02 v1.1.0
 
    - Branched off the 5.1.x version of the module. From now on, 1.1.0 and

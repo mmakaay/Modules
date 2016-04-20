@@ -1,5 +1,5 @@
 Module  : BBcode Google
-Version : 1.1.0
+Version : 1.1.1
 Author  : Maurice Makaay
 
 This module will turn [google]search words[/google] into a link that

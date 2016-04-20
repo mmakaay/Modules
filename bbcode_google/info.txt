@@ -1,6 +1,7 @@
 title: BBcode Google
 desc:  This module will turn [google]search words[/google] into a link that will search for the search words on Google.
-version: 1.1.0
+version: 1.1.2
+url: http://www.phorum.org/phorum5/read.php?62,123949
 require_version: 5.2.2
 category: bbcode
 
