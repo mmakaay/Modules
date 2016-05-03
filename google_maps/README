@@ -1,5 +1,5 @@
 Module  : Google Maps Module
-Version : 2.0.5
+Version : 2.0.7
 Author  : Maurice Makaay <maurice@phorum.org>
 
 This module implements Google Maps functionality in the user profile.
@@ -74,6 +74,11 @@ Contents:
   - Move the new "google_maps" directory to the "mods" directory.
 
   - Go to the Modules administration and enable the module "Google Maps".
+
+  - Convert module v1 user settings data to v2 user settings data with
+    conversion-v1-user-settings-to-v2.php in the scripts directory of
+    google_maps. Do not call this script from a browser. Yos have to call it
+    from your server command line.
 
 
 3. Customization

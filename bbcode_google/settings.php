@@ -26,7 +26,7 @@
     }
 
     include_once "./include/admin/PhorumInputForm.php";
-    $frm =& new PhorumInputForm ("", "post", "Save");
+    $frm = new PhorumInputForm ("", "post", "Save");
     $frm->hidden("module", "modsettings");
     $frm->hidden("mod", "bbcode_google");
 

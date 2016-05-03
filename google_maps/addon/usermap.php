@@ -62,7 +62,7 @@ foreach ($users as $user)
           : $user['display_name']);
     $plot['info'] =
         "<a href=\"#\" onclick=\"parent.document.location.href='".addslashes($url)."';" .
-                  "return false\">$name</a>";
+                  "return false\">$name<\/a>";
 
     // Provide a hook for modules to influence the info window.
     if (isset($PHORUM['hooks']['google_maps_user_info']))

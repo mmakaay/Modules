@@ -9,7 +9,7 @@ define("GOOGLE_IMG", $PHORUM['http_path']."/mods/bbcode_google/google.png");
 // The function that is used for generating the CSS for this module.
 function mod_bbcode_google_css()
 {
-    $PHORUM = $GLOBALS['PHORUM'];
+    global $PHORUM;
     $padding_left = "5px";
     $background = "";
 
@@ -39,7 +39,7 @@ function mod_bbcode_google_css()
 // Register the additional CSS code with Phorum.
 function phorum_mod_bbcode_google_css_register($data)
 {
-    $PHORUM = $GLOBALS['PHORUM'];
+    global $PHORUM;
 
     // Do not add the built-in styling in case the built-in style is disabled.
     if (isset($PHORUM["mod_bbcode_google"]["builtin_style"]) &&
@@ -73,7 +73,7 @@ function phorum_mod_bbcode_google_javascript_register($data)
 // Format the Google links in the message body.
 function phorum_mod_bbcode_google_format($data)
 {
-    $PHORUM = $GLOBALS["PHORUM"];
+    global $PHORUM;
 
     foreach($data as $message_id => $message)
     {
@@ -129,7 +129,7 @@ function phorum_mod_bbcode_google_format($data)
 // be enabled for this to work.
 function phorum_mod_bbcode_google_editor_tool_plugin()
 {
-    $PHORUM = $GLOBALS['PHORUM'];
+    global $PHORUM;
     if (empty($PHORUM["mod_bbcode_google"]["enable_editor_tool"])) return;
     $lang = $PHORUM['DATA']['LANG']['bbcode_google'];
 

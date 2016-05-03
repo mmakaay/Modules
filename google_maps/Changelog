@@ -1,6 +1,21 @@
 Changelog:
 ----------
 
+2015-08-05 v2.0.7 (Oliver Riesen)
+
+    - Fixed conversion of module v1 user settings data to v2 user settings
+      data. Longitude was replaced by Latitude during conversion.
+
+    - Added conversion script for module v1 user settings data.
+
+2015-08-05 v2.0.6 (Oliver Riesen)
+
+    - Fixed handling of http/https in javascript links to Google.
+
+    - Escaping ampersand in URL.
+
+    - Language files from German Language Files Package added.
+
 2011-04-11 v2.0.5 (Maurice Makaay)
 
     - Restored the functionality of searching for the user's location
@@ -14,7 +29,7 @@ Changelog:
       customized module template.
 
     - Fixed the usermap addon for MSIE8 and before. The markers did not
-      show up due to a javascript issue. 
+      show up due to a javascript issue.
 
 2011-04-01 v2.0.4 (Maurice Makaay)
 
@@ -72,9 +87,9 @@ Changelog:
 
 2010-10-20 v1.2.0 (Thomas Seifert)
 
-    - Added retrieving the city and country of the user on saving their 
-      position. This makes it possible to show the city and/or country 
-      e.g. on the read page. 
+    - Added retrieving the city and country of the user on saving their
+      position. This makes it possible to show the city and/or country
+      e.g. on the read page.
       (requires json_decode and a way to do remote access)
 
     - Dropped support for the (ancient) Real Names module for Phorum 5.1.
@@ -209,10 +224,10 @@ Changelog:
     - If a user saved some profile data on another control center page
       than the page on which the Google map was, then the location
       info would get lost. This bug is now fixed.
-      Thanks to Bert Körn for reporting this problem.
+      Thanks to Bert KÃ¶rn for reporting this problem.
 
     - Added language support (german_du.php).
-      Also thanks to Bert Körn for this one.
+      Also thanks to Bert KÃ¶rn for this one.
 
     - Changed Stammgast -> Benutzer in the German language file and
       created a german_sie.php based on german_du.php.

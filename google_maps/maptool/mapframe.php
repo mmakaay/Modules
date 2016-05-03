@@ -66,7 +66,7 @@ $lang = $PHORUM["DATA"]["LANG"]["mod_google_maps"];
       #map { height: 100%; width: 100%; }
     </style>
     <title>Google Map interface</title>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&region=<?php print $lang['geocoding_lang'] ?>"></script>
+    <script type="text/javascript" src="http<?php echo ($_SERVER['SERVER_PORT']==443 ? 's' : ''); ?>://maps.google.com/maps/api/js?sensor=false&amp;region=<?php print $lang['geocoding_lang'] ?>"></script>
     <script type="text/javascript" src="<?php print $PHORUM['http_path'] ?>/mods/google_maps/maptool/fluster/lib/Fluster2.packed.js"></script>
 
     <script type="text/javascript">
@@ -358,7 +358,7 @@ $lang = $PHORUM["DATA"]["LANG"]["mod_google_maps"];
                     content     : info,
                     pixelOffset : new google.maps.Size(0, 16)
                 });
-                info_window.open(map, marker); 
+                info_window.open(map, marker);
             });
         }
     }
@@ -492,15 +492,15 @@ $lang = $PHORUM["DATA"]["LANG"]["mod_google_maps"];
         }
 
         // Set the streetview state.
-        if (state.streetview_latitude  !== null      && 
-            state.streetview_latitude  !== undefined && 
-            state.streetview_longitude !== null      && 
-            state.streetview_longitude !== undefined && 
-            state.streetview_pitch     !== null      && 
-            state.streetview_pitch     !== undefined && 
-            state.streetview_heading   !== null      && 
-            state.streetview_heading   !== undefined && 
-            state.streetview_zoom      !== null      && 
+        if (state.streetview_latitude  !== null      &&
+            state.streetview_latitude  !== undefined &&
+            state.streetview_longitude !== null      &&
+            state.streetview_longitude !== undefined &&
+            state.streetview_pitch     !== null      &&
+            state.streetview_pitch     !== undefined &&
+            state.streetview_heading   !== null      &&
+            state.streetview_heading   !== undefined &&
+            state.streetview_zoom      !== null      &&
             state.streetview_zoom      !== undefined)
         {
             streetview.setPosition(new google.maps.LatLng(
